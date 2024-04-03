@@ -116,10 +116,75 @@ class SettingController extends Controller
      * @param  \App\Models\setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, setting $setting)
+    public function update(Request $request,$id, setting $setting)
     {
-        //
-        return $request;
+        
+        $setting=setting::findOrFail($id);
+
+        if($request->hasFile('dr_image')){
+            
+            $image_path= public_path("\assets\imgs\\") .$setting->dr_image; 
+            if (file_exists($image_path)) {
+
+                @unlink($image_path);
+            }
+            $imagedr_image=$request->file('dr_image')->getClientOriginalName();
+            $pathdr_image=$request->file('dr_image')->storeAs('setting',$imagedr_image);
+            $setting->dr_image=$pathdr_image;
+    
+        }
+        if($request->hasFile('favicon')){
+            
+            $image_path= public_path("\assets\imgs\\") .$setting->favicon; 
+            if (file_exists($image_path)) {
+
+                @unlink($image_path);
+            }
+            $imagefavicon=$request->file('favicon')->getClientOriginalName();
+            $pathfavicon=$request->file('favicon')->storeAs('setting',$imagefavicon);
+            $setting->favicon=$pathfavicon;
+
+        }
+        if($request->hasFile('logo')){
+            
+            $image_path= public_path("\assets\imgs\\") .$setting->logo; 
+            if (file_exists($image_path)) {
+
+                @unlink($image_path);
+            }
+            $imagelogo=$request->file('logo')->getClientOriginalName();
+            $pathlogo=$request->file('logo')->storeAs('setting',$imagelogo);
+            $setting->logo=$pathlogo;
+
+            
+        }
+        $setting->update([
+            'title_en' => $request->title_en,
+            'title' => $request->title,
+            'seo_keywords' => $request->seo_keywords,
+            'seo_desc' => $request->seo_desc,
+            'phone1' => $request->phone1,
+            'phone2' => $request->phone2,
+            'whatsapp' => $request->whatsapp,
+            'email' => $request->email,
+            'open_hours_en' => $request->open_hours_en,
+            'open_hours' => $request->open_hours,
+            'location_en' => $request->location_en,
+            'location' => $request->location,
+            'title_en' => $request->title_en,
+            'subtitle_en' => $request->subtitle_en,
+            'subtitle' => $request->subtitle,
+            'dr_name_en' => $request->dr_name_en,
+            'dr_name' => $request->dr_name,
+            'instagram' => $request->instagram,
+            'twitter' => $request->twitter,
+            'facebook' => $request->facebook,
+            'linkedin' => $request->linkedin,
+        ]);
+        
+        return redirect()->route('Setting.index');
+
+
     }
 
     /**
