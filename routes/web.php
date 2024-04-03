@@ -20,6 +20,7 @@ Route::get('/setlocale/{locale}', 'LocaleController@setLocale')->name('setlocale
 ; 
 Route::resource('Setting', '\App\Http\Controllers\SettingController');
 Route::resource('Slider', '\App\Http\Controllers\SliderController');
+Route::resource('Whychooseus', '\App\Http\Controllers\WhychooseusController');
 
 
 
