@@ -15,8 +15,8 @@ class CreateBannerSectionsTable extends Migration
     {
         Schema::create('banner_sections', function (Blueprint $table) {
             $table->id();
-            $table->string('title_en');
-            $table->string('title');
+            $table->string('title_en')->nullable();
+            $table->string('title')->nullable();
             $table->timestamps();
         });
     }

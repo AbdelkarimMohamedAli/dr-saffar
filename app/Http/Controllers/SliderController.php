@@ -15,6 +15,8 @@ class SliderController extends Controller
     public function index()
     {
         //
+        $sliders=slider::paginate(15);
+        return view('layouts.slider.index',compact('sliders'));
     }
 
     /**
@@ -25,6 +27,8 @@ class SliderController extends Controller
     public function create()
     {
         //
+        $sliders=slider::all();
+        return view('layouts.slider.create',compact('sliders'));
     }
 
     /**
@@ -36,6 +40,20 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         //
+        $slider=new slider();
+
+        $imageslider_image=$request->file('slider_image')->getClientOriginalName();
+        $pathslider_image=$request->file('slider_image')->storeAs('slider',$imageslider_image);
+        $slider->slider_image=$pathslider_image;
+        $slider->slider_content1_en=$request->slider_content1_en;
+        $slider->slider_content2_en=$request->slider_content2_en;
+        $slider->slider_content3_en=$request->slider_content3_en;
+        $slider->slider_content1=$request->slider_content1;
+        $slider->slider_content2=$request->slider_content2;
+        $slider->slider_content3=$request->slider_content3;
+        $slider->save();
+        return redirect()->route('Slider.index');
+
     }
 
     /**
@@ -55,9 +73,12 @@ class SliderController extends Controller
      * @param  \App\Models\slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function edit(slider $slider)
+    public function edit(Request $request,$id,slider $slider)
     {
         //
+        $slider=slider::findOrFail($id);
+        return view('layouts.slider.edit',compact('slider'));
+
     }
 
     /**
@@ -67,9 +88,39 @@ class SliderController extends Controller
      * @param  \App\Models\slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, slider $slider)
+    public function update(Request $request,$id, slider $slider)
     {
         //
+        $slider=slider::findOrFail($id);
+
+        if($request->hasFile('slider_image')){
+            
+            $image_path= public_path("\assets\imgs\\") .$slider->slider_image; 
+            if (file_exists($image_path)) {
+
+                @unlink($image_path);
+            }
+        
+            $imageslider_image=$request->file('slider_image')->getClientOriginalName();
+            $pathslider_image=$request->file('slider_image')->storeAs('slider',$imageslider_image);
+            $slider->slider_image=$pathslider_image;
+        }
+
+            $slider->update([
+                'slider_content1_en' => $request->slider_content1_en,
+                'slider_content2_en' => $request->slider_content2_en,
+                'slider_content3_en' => $request->slider_content3_en,
+                'slider_content1' => $request->slider_content1,
+                'slider_content2' => $request->slider_content2,
+                'slider_content3' => $request->slider_content3,
+                
+            ]);
+            return redirect()->route('Slider.index');
+
+
+
+    
+        
     }
 
     /**
@@ -78,8 +129,19 @@ class SliderController extends Controller
      * @param  \App\Models\slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function destroy(slider $slider)
+    public function destroy(Request $request,$id,slider $slider)
     {
         //
+        $slider=slider::findOrFail($request->id);
+
+
+        $image_path= public_path("\assets\imgs\\") .$slider->slider_image; 
+            if (file_exists($image_path)) {
+
+                @unlink($image_path);
+            }
+        slider::findOrFail($request->id)->delete();
+        return redirect()->route('Slider.index');
+
     }
 }

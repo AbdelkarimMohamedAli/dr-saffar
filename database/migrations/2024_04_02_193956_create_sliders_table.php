@@ -15,13 +15,13 @@ class CreateSlidersTable extends Migration
     {
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
-            $table->string('slider_image');
-            $table->string('slider_content1_en');
-            $table->string('slider_content2_en');
-            $table->string('slider_content3_en');
-            $table->string('slider_content1');
-            $table->string('slider_content2');
-            $table->string('slider_content3');
+            $table->string('slider_image')->nullable();
+            $table->string('slider_content1_en')->nullable();
+            $table->string('slider_content2_en')->nullable();
+            $table->string('slider_content3_en')->nullable();
+            $table->string('slider_content1')->nullable();
+            $table->string('slider_content2')->nullable();
+            $table->string('slider_content3')->nullable();
             $table->timestamps();
         });
     }

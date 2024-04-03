@@ -194,6 +194,24 @@ class SettingController extends Controller
     public function destroy(Request $request,setting $setting)
     {
         //
+        $setting=setting::findOrFail($request->id);
+
+
+        $image_path1= public_path("\assets\imgs\\") .$setting->logo; 
+            if (file_exists($image_path1)) {
+
+                @unlink($image_path1);
+            }
+            $image_path2= public_path("\assets\imgs\\") .$setting->favicon; 
+            if (file_exists($image_path2)) {
+
+                @unlink($image_path2);
+            }
+            $image_path3= public_path("\assets\imgs\\") .$setting->dr_image; 
+            if (file_exists($image_path3)) {
+
+                @unlink($image_path3);
+            }
         setting::findOrFail($request->id)->delete();
         return redirect()->route('Setting.index');
 
