@@ -1,11 +1,19 @@
 <div class="deznav">
             <div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
-                    <li><a href="{{ url('/Setting') }}" class="ai-icon" aria-expanded="false">
-							<i class="flaticon-381-settings-2"></i>
+                   
+                    <li><a class="has-arrow ai-icon" href="javascript:void()"  aria-expanded="false">
+							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Setting</span>
 						</a>
-					</li>
+                        <ul aria-expanded="false">
+							<li><a href="{{ url('/Setting') }}">Setting</a></li>
+						</ul>
+                        <ul aria-expanded="false">
+							<li><a href="{{ url('/Setting/create') }}">create</a></li>
+						</ul>
+
+                    </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Dashboard</span>

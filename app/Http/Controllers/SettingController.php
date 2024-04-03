@@ -73,9 +73,7 @@ class SettingController extends Controller
         $setting->twitter=$request->twitter;
         $setting->facebook=$request->facebook;
         $setting->linkedin=$request->linkedin;
-        $setting->youtube=$request->youtube;
-        $setting->snapchat=$request->snapchat;
-        $setting->map=$request->map;
+
         
         $setting->save();
         // toastr()->success(trans('messages.success'));
@@ -193,8 +191,12 @@ class SettingController extends Controller
      * @param  \App\Models\setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function destroy(setting $setting)
+    public function destroy(Request $request,setting $setting)
     {
         //
+        setting::findOrFail($request->id)->delete();
+        return redirect()->route('Setting.index');
+
+
     }
 }

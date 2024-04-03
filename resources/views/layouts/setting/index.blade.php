@@ -64,7 +64,20 @@
                                     @endphp
                                         <tr>
                                             <td>
-                                                <a class="dropdown-item"href="{{ route('Setting.edit', $setting->id) }}"  >edit</a>        
+                                           
+                                        <button type="submit" class="btn btn-danger">
+                                        <a class="dropdown-item"href="{{ route('Setting.edit', $setting->id) }}"  >edit</a>        
+
+                                        </button>
+
+                                        <form action="{{route('Setting.destroy','test')}}" method="post">
+                                                    {{method_field('Delete')}}
+                                                    @csrf
+                                                    <input id="id" type="hidden" name="id" class="form-control"
+                                                           value="{{ $setting->id }}">
+                                                    <button type="submit" class="btn btn-danger">delete</button>
+                                        </form>
+
                                             </td>
                                             <td>{{ $i }}</td>
                                             <td>{{ $setting->title_en }}</td>
@@ -98,6 +111,9 @@
                                             <td>{{ $setting->linkedin }}</td>
                                            
                                         </tr>
+
+                                        
+
                                     @endforeach                                           
                                 </tbody>
                                

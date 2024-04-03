@@ -161,24 +161,7 @@
                                         <input type="text" name="linkedin" class="form-control form-control-sm">
                                     </div>
                                 </div>
-                                <div class="mb-3 row">
-                                    <label class="col-sm-2 col-form-label col-form-label-sm">youtube</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" name="youtube" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="mb-3 row">
-                                    <label class="col-sm-2 col-form-label col-form-label-sm">snapchat</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" name="snapchat" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="mb-3 row">
-                                    <label class="col-sm-2 col-form-label col-form-label-sm">map</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" name="map" class="form-control form-control-sm">
-                                    </div>
-                                </div>
+                               
                                 <div class="mb-3 row">
                                 
                                 <button type="submit" class="btn btn-primary">submit</button>
