@@ -1,0 +1,1273 @@
+.navbar-brand {
+  margin-right: 0;
+}
+
+.main-navbar .navbar ul {
+  padding-right: 0;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item a::after {
+  left: 0;
+  right: auto;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item a:hover::after, .main-navbar .navbar .navbar-nav .nav-item a:focus::after, .main-navbar .navbar .navbar-nav .nav-item a.active::after {
+  left: auto;
+  right: 0;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item:first-child {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item:last-child {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .dropdown-menu {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a i {
+  left: 15px;
+  right: auto;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a::before {
+  right: 20px;
+  left: auto;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+  padding-right: 38px;
+  padding-left: 0;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+  right: -250px;
+  left: auto;
+}
+
+.main-navbar .navbar .others-options {
+  margin-right: 30px;
+  margin-left: 0;
+}
+
+.main-navbar .navbar .others-options .option-item {
+  margin-left: 25px;
+  margin-right: 0;
+}
+
+.main-navbar .navbar .others-options .option-item .call-info i {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.main-navbar .navbar .others-options .option-item:last-child {
+  margin-left: 0;
+}
+
+.main-banner-content-with-search .banner-search-form {
+  padding-left: 130px;
+  padding-right: 0;
+}
+
+.main-banner-content-with-search .banner-search-form .form-group {
+  border-left: 1px solid #d9dee2;
+  border-right: none;
+}
+
+.main-banner-content-with-search .banner-search-form .form-group label {
+  right: 25px;
+  left: auto;
+}
+
+.main-banner-content-with-search .banner-search-form .form-group .form-control {
+  padding: 15px 50px 15px 15px;
+}
+
+.main-banner-content-with-search .banner-search-form .form-group.border-right {
+  border-left: none;
+}
+
+.main-banner-content-with-search .banner-search-form .form-group.border-right label {
+  right: 0;
+  left: auto;
+}
+
+.main-banner-content-with-search .banner-search-form .form-group.border-right .form-control {
+  padding: 15px 25px 15px 15px;
+}
+
+.main-banner-content-with-search .banner-search-form .search-btn {
+  left: 0;
+  right: auto;
+}
+
+.main-banner-content-with-search .banner-search-form .search-btn .default-btn {
+  border-radius: 50px 0 0 50px;
+}
+
+.main-banner-content-with-search .banner-search-form .search-btn .default-btn i {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.main-banner-content-with-search .banner-bottom-text p {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.main-banner-content-with-search .banner-bottom-text p i {
+  right: 0;
+  left: auto;
+}
+
+.main-banner-image-with-doctor .banner-doctor-content {
+  left: 0;
+  right: auto;
+}
+
+.main-banner-image-with-doctor .banner-doctor-content .doctor-info-box .info-item {
+  padding-right: 65px;
+  padding-left: 0;
+}
+
+.main-banner-image-with-doctor .banner-doctor-content .doctor-info-box .info-item img {
+  right: 0;
+  left: auto;
+}
+
+.main-banner-image-with-doctor .banner-card-content {
+  right: 0;
+  left: auto;
+}
+
+.main-banner-image-with-doctor .banner-image-shape-1 {
+  right: 20px;
+  left: auto;
+}
+
+.main-banner-image-with-doctor .banner-image-shape-2 {
+  left: 0;
+  right: auto;
+}
+
+.book-appointment-inner-box .book-appointment-form .form-group .form-control {
+  padding: 15px 25px 15px 20px;
+}
+
+.book-appointment-inner-box .book-appointment-form .form-group label {
+  left: 20px;
+  right: auto;
+}
+
+.book-appointment-inner-box .book-appointment-form .form-group .selectize-input:after {
+  left: 20px !important;
+  right: auto !important;
+}
+
+.why-choose-content {
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+.single-services-card .services-shape-1 {
+  left: -70px;
+  right: auto;
+}
+
+.healthcare-doctor-image .circle-pattern {
+  right: 40px;
+  left: auto;
+}
+
+.healthcare-doctor-image .healthcare-card-content {
+  right: 0;
+  left: auto;
+}
+
+.professional-doctors-card .doctors-image .add-icon {
+  right: 20px;
+  left: auto;
+}
+
+.professional-doctors-card .doctors-image .social {
+  padding: 0;
+}
+
+.testimonials-card-item .image .double-quotes-icon {
+  left: 0;
+  right: 85px;
+}
+
+.blog-card-item .image .date {
+  left: 10px;
+  right: auto;
+}
+
+.single-footer-widget .widget-info {
+  padding-right: 75px;
+  padding-left: 0;
+}
+
+.single-footer-widget .widget-info img {
+  right: 0;
+  left: auto;
+}
+
+.single-footer-widget .quick-links {
+  padding-right: 0;
+}
+
+.single-footer-widget .quick-links li a {
+  padding-right: 18px;
+  padding-left: 0;
+}
+
+.single-footer-widget .quick-links li a::before {
+  right: 0;
+  left: auto;
+  top: 0;
+}
+
+.single-footer-widget .quick-links li a:hover {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.single-footer-widget .footer-widget-blog .item .thumb {
+  float: right;
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.single-footer-widget .footer-information {
+  padding-right: 0;
+}
+
+.single-footer-widget .footer-information li {
+  text-align: right;
+  padding-right: 50px;
+  padding-left: 0;
+}
+
+.single-footer-widget .footer-information li i {
+  right: 0;
+  left: auto;
+}
+
+.single-footer-widget .footer-image .dot-shape {
+  right: 50px;
+  left: auto;
+}
+
+.ps-5 {
+  padding-right: 3rem !important;
+  padding-left: 0 !important;
+}
+
+.ps-3 {
+  padding-right: 1rem !important;
+  padding-left: 0 !important;
+}
+
+.go-top {
+  left: 20px;
+  right: auto;
+}
+
+.main-banner-with-man-content .banner-information {
+  padding-right: 105px;
+  padding-left: 0;
+}
+
+.main-banner-with-man-content .banner-information .icon {
+  right: 0;
+  left: auto;
+}
+
+.main-banner-with-man-content .banner-btn-list li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.main-banner-with-man-content .banner-btn-list li:last-child {
+  margin-left: 0;
+}
+
+.about-content {
+  padding-right: 45px;
+  padding-left: 0;
+}
+
+.about-content .about-list li {
+  padding-right: 22px;
+  padding-left: 0;
+}
+
+.about-content .about-list li i {
+  right: 0;
+  left: auto;
+}
+
+.easy-solutions-line-shape {
+  right: -245px;
+  left: 0;
+}
+
+.offer-slides.owl-theme .owl-nav [class*=owl-] {
+  left: 55px;
+  right: auto;
+}
+
+.offer-slides.owl-theme .owl-nav [class*=owl-].owl-next {
+  left: 0;
+  right: auto;
+}
+
+.single-offer-card .offer-shape-1 {
+  left: -70px;
+  right: auto;
+}
+
+.portfolio-area-with-slides .container-fluid {
+  right: calc((100% - 1320px)/2);
+  left: auto;
+}
+
+.appointment-form-content .appointment-information {
+  padding-right: 105px;
+  padding-left: 0;
+}
+
+.appointment-form-content .appointment-information .icon {
+  right: 0;
+  left: auto;
+}
+
+.appointment-form-content .appointment-social-information .social li {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.appointment-form-content .appointment-social-information .social li:last-child {
+  margin-left: 0;
+}
+
+.appointment-form-wrap form .form-group label {
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.appointment-form-wrap form .form-group .appointment-checkbox-wrap [type="checkbox"]:checked + label, .appointment-form-wrap form .form-group .appointment-checkbox-wrap [type="checkbox"]:not(:checked) + label {
+  padding-right: 45px;
+  padding-left: 0;
+}
+
+.appointment-form-wrap form .form-group .appointment-checkbox-wrap [type="checkbox"]:checked + label:before, .appointment-form-wrap form .form-group .appointment-checkbox-wrap [type="checkbox"]:not(:checked) + label:before {
+  right: 0;
+  left: auto;
+}
+
+.appointment-form-wrap form .form-group .appointment-checkbox-wrap [type="checkbox"]:checked + label:after, .appointment-form-wrap form .form-group .appointment-checkbox-wrap [type="checkbox"]:not(:checked) + label:after {
+  right: 8px;
+  left: auto;
+}
+
+.appointment-form-image {
+  right: 10%;
+  left: auto;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.testimonials-slides-two.owl-theme .owl-nav [class*=owl-] {
+  left: 55px;
+  right: auto;
+}
+
+.testimonials-slides-two.owl-theme .owl-nav [class*=owl-].owl-next {
+  left: 0;
+  right: auto;
+}
+
+.blog-slides-two.owl-theme .owl-nav [class*=owl-] {
+  left: 55px;
+  right: auto;
+}
+
+.blog-slides-two.owl-theme .owl-nav [class*=owl-].owl-next {
+  left: 0;
+  right: auto;
+}
+
+.single-blog-card .blog-content .author-content .author img {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.single-blog-card .blog-content .author-content p {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.single-blog-card .blog-content .author-content p i {
+  right: 0;
+  left: auto;
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.banner-dot-shape {
+  right: 5%;
+  left: auto;
+}
+
+.main-banner-image-wrap {
+  margin-right: 30px;
+  margin-left: 0;
+}
+
+.single-fun-fact-box {
+  padding-right: 85px;
+  padding-left: 0;
+}
+
+.single-fun-fact-box .icon {
+  right: 0;
+  left: auto;
+}
+
+.care-area::before {
+  left: 0;
+  right: auto;
+  border-radius: 0 10px 10px 0;
+}
+
+.care-content {
+  padding-left: 50px;
+  padding-right: 0;
+}
+
+.care-image .care-shape {
+  right: 70px;
+  left: auto;
+}
+
+.care-image .care-quote {
+  right: -30px;
+  left: auto;
+}
+
+.quality-healthcare-content-with-image {
+  padding-right: 35px;
+  padding-left: 0;
+}
+
+.quality-healthcare-image-shape {
+  right: 2%;
+  left: auto;
+}
+
+.single-services-item::before {
+  right: 0;
+  left: auto;
+}
+
+.single-doctors-card .doctors-content .doc-info .rating {
+  float: left;
+}
+
+.single-pricing-table .price span {
+  left: 10px;
+  right: auto;
+}
+
+.single-pricing-table .pricing-features-list {
+  padding-right: 0;
+}
+
+.single-pricing-table .pricing-features-list li {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.single-pricing-table .pricing-features-list li i {
+  right: 0;
+  left: auto;
+}
+
+.doctor-calendar-table {
+  overflow-x: unset;
+}
+
+.page-banner-image {
+  left: 0;
+  right: auto;
+}
+
+.page-banner-content ul {
+  padding-right: 0;
+}
+
+.page-banner-content ul li {
+  margin-right: 25px;
+  margin-left: 0;
+}
+
+.page-banner-content ul li:first-child {
+  margin-right: 0;
+}
+
+.page-banner-content ul li::before {
+  right: -18px;
+  left: auto;
+}
+
+.widget-area {
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+.widget-area .widget_search form button {
+  left: 5px;
+  right: auto;
+}
+
+.widget-area .widget_top-services ul {
+  padding-right: 0;
+}
+
+.widget-area .widget_top-services ul li {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.widget-area .widget_top-services ul li::before {
+  right: 0;
+  left: auto;
+}
+
+.widget-area .widget_instagram ul {
+  padding-right: 0;
+}
+
+.widget-area .widget_categories ul {
+  padding-right: 0;
+}
+
+.widget-area .widget_categories ul li {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.widget-area .widget_categories ul li::before {
+  right: 0;
+  left: auto;
+}
+
+.widget-area .widget_categories ul li span {
+  float: left;
+}
+
+.widget-area .widget_medip_posts_thumb .item .thumb {
+  float: right;
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.services-details-desc .services-features-list {
+  padding-right: 0;
+}
+
+.services-details-desc .services-features-list li {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.services-details-desc .services-features-list li i {
+  right: 0;
+  left: auto;
+}
+
+.text-start {
+  text-align: right !important;
+}
+
+.doctors-details-desc {
+  padding-right: 50px;
+  padding-left: 0;
+}
+
+.doctors-details-content .doc-info li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.doctors-details-content .doc-info li:last-child {
+  margin-left: 0;
+}
+
+.doctors-details-content .doc-basic-info .basic-info-item .row .col-lg-9 {
+  border-right: 1px solid #88fbd2;
+  border-left: none;
+}
+
+.doctors-details-content .doc-basic-info .basic-info-item p {
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.doctors-details-content .doc-basic-info .basic-info-item .info-list li {
+  padding-right: 28px;
+  padding-left: 0;
+}
+
+.doctors-details-content .doc-basic-info .basic-info-item .info-list li i {
+  margin-left: 5px;
+  margin-right: 0;
+  right: 0;
+  left: auto;
+}
+
+.portfolio-list-tab .tabs li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.portfolio-list-tab .tabs li:last-child {
+  margin-left: 0;
+}
+
+.portfolio-desc-information .info-box li span {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.portfolio-desc-information .social {
+  padding-right: 0;
+}
+
+.portfolio-desc-information .social li {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.portfolio-desc-information .social li:last-child {
+  margin-left: 0;
+}
+
+.portfolio-details-accordion .accordion-item .accordion-button {
+  padding-right: 35px;
+  padding-left: 100px;
+}
+
+.portfolio-details-accordion .accordion-item .accordion-button::before {
+  left: 30px;
+  right: auto;
+}
+
+.working-hours-wrap .time-info li span {
+  float: left;
+}
+
+.faq-accordion .accordion-item .accordion-button {
+  padding-right: 35px;
+  padding-left: 100px;
+}
+
+.faq-accordion .accordion-item .accordion-button::before {
+  left: 30px;
+  right: auto;
+}
+
+.list-unstyled {
+  padding-right: 0;
+}
+
+.medip-grid-sorting .ordering .selectize-input:after {
+  left: 20px !important;
+  right: auto !important;
+}
+
+.single-products-box .products-content .add-to-cart {
+  left: 0;
+  right: auto;
+}
+
+.single-products-box .products-image .sale-tag {
+  right: 20px;
+  left: auto;
+}
+
+.single-products-box .products-image .new-tag {
+  right: 20px;
+  left: auto;
+}
+
+.cart-table table tbody tr td.product-subtotal .remove {
+  float: left;
+}
+
+.cart-buttons {
+  text-align: left;
+}
+
+.cart-buttons .shopping-coupon-code button {
+  left: 0;
+  right: auto;
+}
+
+.cart-totals ul {
+  padding-right: 0;
+}
+
+.cart-totals ul li span {
+  float: left;
+}
+
+.order-details .title::before {
+  right: 0;
+  left: auto;
+}
+
+.billing-details .title::before {
+  right: 0;
+  left: auto;
+}
+
+.user-actions i {
+  margin-left: 2px;
+  margin-right: 0;
+}
+
+.order-details .payment-box .payment-method p [type="radio"]:checked + label, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.order-details .payment-box .payment-method p [type="radio"]:checked + label::before, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::before {
+  right: 0;
+  left: auto;
+}
+
+.order-details .payment-box .payment-method p [type="radio"]:checked + label::after, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::after {
+  right: 4px;
+  left: auto;
+}
+
+.form-check {
+  padding-right: 1.5em;
+  padding-left: 0;
+}
+
+.form-check .form-check-input {
+  float: right;
+  margin-right: -1.5em;
+  margin-left: 0;
+}
+
+.products-details-desc .products-add-to-cart .input-counter {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.products-details-desc .products-share .social {
+  padding-right: 0;
+}
+
+.products-details-desc .products-share .social li span {
+  margin-left: 3px;
+  margin-right: 0;
+}
+
+.products-details-tabs .nav .nav-item {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.products-details-tabs .nav .nav-item:last-child {
+  margin-left: 0;
+}
+
+.products-details-tabs .nav .nav-item .nav-link::before {
+  right: 0;
+  left: auto;
+}
+
+.products-details-tabs .tab-content .tab-pane ul {
+  padding-right: 0;
+}
+
+.products-details-tabs .tab-content .tab-pane ul li {
+  padding-right: 18px;
+  padding-left: 0;
+}
+
+.products-details-tabs .tab-content .tab-pane ul li::before {
+  right: 0;
+  left: auto;
+}
+
+.products-details-tabs .tab-content .tab-pane .products-reviews .right {
+  text-align: left;
+}
+
+.products-details-tabs .tab-content .tab-pane .products-reviews .side {
+  padding-right: 0;
+}
+
+.products-details-tabs .tab-content .tab-pane .products-review-comments .user-review {
+  padding: 20px 110px 20px 0;
+}
+
+.products-details-tabs .tab-content .tab-pane .products-review-comments .user-review img {
+  right: 0;
+  left: auto;
+}
+
+.products-details-tabs .tab-content .tab-pane .products-review-comments .user-review .review-rating span {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.products-details-tabs .tab-content .tab-pane .review-form-wrapper form .comment-form-cookies-consent {
+  text-align: right;
+}
+
+.login-form {
+  margin-left: 30px;
+  margin-right: 0;
+}
+
+.login-form form .lost-your-password-wrap {
+  text-align: left;
+}
+
+.blog-details-desc .article-content .entry-meta {
+  padding-right: 0;
+}
+
+.blog-details-desc .article-content .entry-meta li {
+  margin-left: 20px;
+  margin-right: 0;
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.blog-details-desc .article-content .entry-meta li img {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.blog-details-desc .article-content .entry-meta li i {
+  right: 0;
+  left: auto;
+}
+
+.blog-details-desc .article-content .entry-meta li:first-child {
+  padding-right: 0;
+}
+
+.blog-details-desc .article-content .block-quote {
+  padding: 30px 70px 30px 30px;
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.blog-details-desc .article-content .block-quote .icon {
+  right: -20px;
+  left: auto;
+}
+
+.blog-details-desc .article-content .article-share {
+  padding-right: 0;
+  text-align: start;
+}
+
+.blog-details-desc .article-content .article-share span {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.blog-details-desc .article-content .article-share li {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.blog-details-desc .article-content .article-share li:last-child {
+  margin-left: 0;
+}
+
+.blog-details-desc .article-comments .comments-list {
+  padding-right: 105px;
+  padding-left: 0;
+}
+
+.blog-details-desc .article-comments .comments-list img {
+  right: 0;
+  left: auto;
+}
+
+.blog-details-desc .article-comments .comments-list span .reply-btn {
+  margin-right: 30px;
+  margin-left: 0;
+}
+
+.contact-info-box {
+  padding: 35px 125px 35px 35px;
+}
+
+.contact-info-box .icon {
+  right: 35px;
+  left: auto;
+}
+
+.contact-social-information .social li {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.contact-social-information .social li:last-child {
+  margin-left: 0;
+}
+
+.contact-form-wrap form .form-group label {
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.terms-of-service-content .blockquote, .terms-of-service-content .terms-of-service-content blockquote {
+  text-align: right !important;
+}
+
+.privacy-policy-content .blockquote, .privacy-policy-content .privacy-policy-content blockquote {
+  text-align: right !important;
+}
+
+.buy-now-btn {
+display:none;
+}
+
+.switch-box {
+  display:none;
+
+}
+
+.theme-dark .main-banner-content-with-search .banner-search-form .form-group {
+  border-left: 1px solid var(--black-color);
+  border-right: none;
+}
+
+/** Responsive Area
+==============================**/
+@media only screen and (max-width: 767px) {
+  .mean-container a.meanmenu-reveal {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .mean-container .mean-nav ul li a {
+    text-align: right;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    width: 90%;
+    text-align: left;
+    left: 0;
+    right: auto;
+  }
+  .others-option-for-responsive .container .container {
+    left: 10px;
+    right: auto;
+  }
+  .others-option-for-responsive .dot-menu {
+    left: 52px;
+    right: auto;
+  }
+  .others-option-for-responsive .option-inner .others-options .option-item .call-info i {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  .main-banner-content-with-search .banner-search-form {
+    padding: 20px;
+  }
+  .main-banner-content-with-search .banner-search-form .form-group {
+    border-left: none;
+  }
+  .main-banner-content-with-search .banner-search-form .form-group .form-control {
+    padding: 15px 25px 15px 15px;
+  }
+  .main-banner-content-with-search .banner-search-form .form-group label {
+    right: 0;
+  }
+  .main-banner-content-with-search .banner-search-form .search-btn .default-btn {
+    border-radius: 50px;
+  }
+  .why-choose-content {
+    padding-right: 0;
+  }
+  .healthcare-doctor-image .healthcare-card-content {
+    right: 10px;
+  }
+  .ps-5 {
+    padding-right: 0 !important;
+  }
+  .ps-3 {
+    padding-right: 0 !important;
+  }
+  .single-footer-widget .footer-information li {
+    padding-right: 30px;
+  }
+  .main-banner-with-man-content .banner-information {
+    padding-right: 70px;
+  }
+  .about-content {
+    padding-right: 0;
+  }
+  .portfolio-area-with-slides .container-fluid {
+    right: 0;
+  }
+  .appointment-form-content .appointment-information {
+    padding-right: 70px;
+  }
+  .appointment-form-image {
+    right: 0;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .main-banner-image-wrap {
+    margin-right: 0;
+  }
+  .single-fun-fact-box {
+    padding-right: 65px;
+  }
+  .care-area::before {
+    width: 100%;
+    border-radius: 0;
+  }
+  .care-image .care-quote {
+    right: 0;
+  }
+  .quality-healthcare-content-with-image {
+    padding-right: 0;
+  }
+  .doctor-calendar-table {
+    overflow-x: auto;
+  }
+  .widget-area {
+    padding-right: 0;
+  }
+  .doctors-details-desc {
+    padding-right: 0;
+  }
+  .doctors-details-content .doc-basic-info .basic-info-item .row .col-lg-9 {
+    border-right: none;
+  }
+  .doctors-details-content .doc-basic-info .basic-info-item p {
+    padding-right: 0;
+  }
+  .login-form {
+    margin-left: 0;
+  }
+  .login-form form .lost-your-password-wrap {
+    text-align: right;
+  }
+  .blog-details-desc .article-content .entry-meta li {
+    margin-left: 10px;
+  }
+  .blog-details-desc .article-content .block-quote {
+    padding: 25px;
+    margin-right: 0;
+  }
+  .blog-details-desc .article-comments .comments-list {
+    padding-right: 70px;
+  }
+  .blog-details-desc .article-comments .comments-list span .reply-btn {
+    margin-right: 5px;
+  }
+  .contact-info-box {
+    padding: 30px;
+  }
+  .contact-info-box .icon {
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .login-form form .lost-your-password {
+    text-align: start;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .section-title-wrap {
+    margin: 0 0 35px auto;
+  }
+  .mean-container a.meanmenu-reveal {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .mean-container .mean-nav ul li a {
+    text-align: right;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    width: 90%;
+    text-align: left;
+    left: 0;
+    right: auto;
+  }
+  .others-option-for-responsive .container .container {
+    left: 10px;
+    right: auto;
+  }
+  .others-option-for-responsive .dot-menu {
+    left: 52px;
+    right: auto;
+  }
+  .others-option-for-responsive .option-inner .others-options .option-item .call-info i {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  .why-choose-content {
+    padding-right: 0;
+  }
+  .ps-5 {
+    padding-right: 0 !important;
+  }
+  .ps-3 {
+    padding-right: 0 !important;
+  }
+  .about-content {
+    padding-right: 0;
+  }
+  .portfolio-area-with-slides .container-fluid {
+    right: 0;
+  }
+  .portfolio-area-with-slides .section-title-wrap {
+    margin: 0 0 35px auto;
+  }
+  .appointment-form-image {
+    right: 0;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .main-banner-image-wrap {
+    margin-right: 0;
+  }
+  .quality-healthcare-content-with-image {
+    padding-right: 0;
+  }
+  .care-area::before {
+    width: 100%;
+    border-radius: 0;
+  }
+  .care-image .care-quote {
+    right: 0;
+  }
+  .doctor-calendar-table {
+    overflow-x: auto;
+  }
+  .widget-area {
+    padding-right: 0;
+  }
+  .doctors-details-desc {
+    padding-right: 0;
+  }
+  .doctors-details-content .doc-basic-info .basic-info-item .row .col-lg-9 {
+    border-right: none;
+  }
+  .doctors-details-content .doc-basic-info .basic-info-item p {
+    padding-right: 0;
+  }
+  .blog-details-desc .article-comments .comments-list {
+    padding-right: 70px;
+  }
+  .contact-info-box {
+    padding: 30px;
+  }
+  .contact-info-box .icon {
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .mean-container a.meanmenu-reveal {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .mean-container .mean-nav ul li a {
+    text-align: right;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    width: 90%;
+    text-align: left;
+    left: 0;
+    right: auto;
+  }
+  .others-option-for-responsive .container .container {
+    left: 10px;
+    right: auto;
+  }
+  .others-option-for-responsive .dot-menu {
+    left: 52px;
+    right: auto;
+  }
+  .others-option-for-responsive .option-inner .others-options .option-item .call-info i {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  .main-banner-content-with-search .banner-search-form {
+    padding-left: 95px;
+  }
+  .ps-5 {
+    padding-right: 0 !important;
+  }
+  .ps-3 {
+    padding-right: 0 !important;
+  }
+  .single-footer-widget .footer-information li {
+    padding-right: 30px;
+  }
+  .portfolio-area-with-slides .container-fluid {
+    right: 0;
+  }
+  .portfolio-area-with-slides .section-title-wrap {
+    margin: 0 0 35px auto;
+  }
+  .single-fun-fact-box {
+    padding-right: 65px;
+  }
+  .doctor-calendar-table {
+    overflow-x: auto;
+  }
+  .widget-area {
+    padding-right: 0;
+  }
+  .doctors-details-desc {
+    padding-right: 0;
+  }
+  .contact-info-box {
+    padding: 30px;
+  }
+  .contact-info-box .icon {
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .appointment-form-image {
+    right: 20%;
+    left: auto;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  .banner-dot-shape {
+    right: 20%;
+    left: auto;
+  }
+}
+/*# sourceMappingURL=rtl.css.map */
