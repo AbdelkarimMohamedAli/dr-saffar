@@ -50,6 +50,20 @@
 						</ul>
 
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()"  aria-expanded="false">
+							<i class="flaticon-381-networking"></i>
+							<span class="nav-text">Menu</span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="{{ url('/Menu') }}">Menu</a></li>
+						</ul>
+                        <ul aria-expanded="false">
+							<li><a href="{{ url('/Menu/create') }}">create</a></li>
+						</ul>
+
+                    </li>
+                    
+                    
                     
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
