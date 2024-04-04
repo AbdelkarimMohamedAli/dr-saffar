@@ -15,6 +15,9 @@ class BannerSectionController extends Controller
     public function index()
     {
         //
+        $banner_sections=banner_section::paginate(15);
+        return view('layouts.banner_section.index',compact('banner_sections'));
+        
     }
 
     /**
@@ -24,7 +27,8 @@ class BannerSectionController extends Controller
      */
     public function create()
     {
-        //
+        $banner_section=banner_section::all();
+        return view('layouts.banner_section.create',compact('banner_section'));
     }
 
     /**
@@ -36,6 +40,13 @@ class BannerSectionController extends Controller
     public function store(Request $request)
     {
         //
+        $banner_section=new banner_section();
+
+        $banner_section->title_en=$request->title_en	;
+        $banner_section->title=$request->title;
+
+        $banner_section->save();
+        return redirect()->route('Banner.index');
     }
 
     /**
@@ -55,9 +66,11 @@ class BannerSectionController extends Controller
      * @param  \App\Models\banner_section  $banner_section
      * @return \Illuminate\Http\Response
      */
-    public function edit(banner_section $banner_section)
+    public function edit(Request $request,$id,banner_section $banner_section)
     {
         //
+        $banner_section=banner_section::findOrFail($id);
+        return view('layouts.banner_section.edit',compact('banner_section'));
     }
 
     /**
@@ -67,9 +80,15 @@ class BannerSectionController extends Controller
      * @param  \App\Models\banner_section  $banner_section
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, banner_section $banner_section)
+    public function update(Request $request,$id, banner_section $banner_section)
     {
         //
+        $banner_section=banner_section::findOrFail($id);
+        $banner_section->update([
+            'title_en' => $request->title_en,
+            'title' => $request->title,
+        ]);
+        return redirect()->route('Banner.index');
     }
 
     /**
@@ -78,8 +97,9 @@ class BannerSectionController extends Controller
      * @param  \App\Models\banner_section  $banner_section
      * @return \Illuminate\Http\Response
      */
-    public function destroy(banner_section $banner_section)
+    public function destroy(Request $request,$id,banner_section $banner_section)
     {
-        //
+        banner_section::findOrFail($request->id)->delete();
+        return redirect()->route('Banner.index');
     }
 }

@@ -83,7 +83,7 @@ class WhychooseusController extends Controller
      * @param  \App\Models\whychooseus  $whychooseus
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request,whychooseus $whychooseus)
+    public function edit(Request $request,$id,whychooseus $whychooseus)
     {
         $whychooseus=whychooseus::findOrFail($id);
         return view('layouts.whychooseus.edit',compact('whychooseus'));
@@ -131,6 +131,6 @@ class WhychooseusController extends Controller
     public function destroy(Request $request,$id,whychooseus $whychooseus)
     {
         whychooseus::findOrFail($request->id)->delete();
-        return redirect()->route('whychooseus.index');
+        return redirect()->route('Whychooseus.index');
     }
 }

@@ -64,7 +64,7 @@
                                         <a class="dropdown-item"href="{{ route('Whychooseus.edit', $whychooseus->id) }}"  >edit</a>        
 
                                         </button>
-
+                                        
                                         <form action="{{route('Whychooseus.destroy','test')}}" method="post">
                                                     {{method_field('Delete')}}
                                                     @csrf
@@ -76,9 +76,6 @@
 
 
                                             <td>{{ $i }}</td>
-                                            <td>
-                                                <img src="{{ asset('assets/imgs/'.$whychooseus->whychooseus_image) }}" height="40px;" width="40px;" alt="">
-                                            </td>
                                             <td>{{ $whychooseus->section_title_en }}</td>
                                             <td>{{ $whychooseus->section_title }}</td>
                                             <td>{{ $whychooseus->section_sub_en }}</td>

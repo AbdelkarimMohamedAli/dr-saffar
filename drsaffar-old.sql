@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2024 at 10:56 PM
+-- Generation Time: Apr 03, 2024 at 02:36 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `banner_sections` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -60,11 +60,11 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `menus` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `ar_translate` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `parent` int(11) DEFAULT NULL,
-  `sort` int(11) DEFAULT NULL,
+  `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ar_translate` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `parent` int(11) NOT NULL,
+  `sort` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -86,14 +86,14 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(32, '2014_10_12_000000_create_users_table', 1),
-(33, '2014_10_12_100000_create_password_resets_table', 1),
-(34, '2019_08_19_000000_create_failed_jobs_table', 1),
-(35, '2024_04_02_124440_create_whychooseuses_table', 1),
-(36, '2024_04_02_192526_create_menus_table', 1),
-(37, '2024_04_02_193956_create_sliders_table', 1),
-(38, '2024_04_02_194625_create_banner_sections_table', 1),
-(39, '2024_04_02_221809_create_settings_table', 1);
+(9, '2014_10_12_000000_create_users_table', 1),
+(10, '2014_10_12_100000_create_password_resets_table', 1),
+(11, '2019_08_19_000000_create_failed_jobs_table', 1),
+(12, '2024_04_02_124440_create_whychooseuses_table', 1),
+(13, '2024_04_02_192526_create_menus_table', 2),
+(14, '2024_04_02_193956_create_sliders_table', 3),
+(15, '2024_04_02_194625_create_banner_sections_table', 4),
+(16, '2024_04_02_221809_create_settings_table', 5);
 
 -- --------------------------------------------------------
 
@@ -115,32 +115,42 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `settings` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_keywords` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_desc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `whatsapp` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `open_hours_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `open_hours` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `location_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `location` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `subtitle_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `subtitle` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `favicon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `dr_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `dr_name_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `dr_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `instagram` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `twitter` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `facebook` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `linkedin` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `seo_keywords` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `seo_desc` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `whatsapp` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `logo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `open_hours_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `open_hours` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `location_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `location` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subtitle_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subtitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `favicon` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dr_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dr_name_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dr_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `instagram` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `twitter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `facebook` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `linkedin` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `youtube` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `snapchat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `map` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `title_en`, `title`, `seo_keywords`, `seo_desc`, `phone1`, `phone2`, `whatsapp`, `email`, `logo`, `open_hours_en`, `open_hours`, `location_en`, `location`, `subtitle_en`, `subtitle`, `favicon`, `dr_image`, `dr_name_en`, `dr_name`, `instagram`, `twitter`, `facebook`, `linkedin`, `youtube`, `snapchat`, `map`, `created_at`, `updated_at`) VALUES
+(1, 'Dr. Alsaffar', 'دكتور الصفار', 'Dr. Alsaffar', 'Dr. Alsaffar', '01025969927', '01025969927', '01025969927', 'info@dralsaffar.com', 'setting/alsaffar_logo_green.gif', '09:00 AM to 18:00 PM', 'من 9 ص الي 6 م', 'Egypt, Cairo', 'مصر,القاهرة', 'Dr Mahdi Alsaffar is an Orthopaedic surgeon specia...', 'Dr Mahdi Alsaffar is an Orthopaedic surgeon specia...', 'setting/الكود 3426 السعر 1190.jpg', 'setting/الكود 4410بعد الخصم 510.jpg', 'Dr. Alsaffar', 'الصفار', 'https://www.instagram.com/drmalsaffar/', 'شسي', 'https://www.facebook.com/mahdi.alsaffar.9?mibextid=9R9pXO', 'http://linkedin.com/in/mahdi-alsaffar-576a9222a', 'سيي', 'شسيشي', 'شسيسشي', '2024-04-03 00:52:18', '2024-04-03 00:52:18');
 
 -- --------------------------------------------------------
 
@@ -150,23 +160,16 @@ CREATE TABLE `settings` (
 
 CREATE TABLE `sliders` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `slider_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slider_content1_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slider_content2_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slider_content3_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slider_content1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slider_content2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slider_content3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slider_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_content1_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_content2_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_content3_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_content1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_content2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slider_content3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `sliders`
---
-
-INSERT INTO `sliders` (`id`, `slider_image`, `slider_content1_en`, `slider_content2_en`, `slider_content3_en`, `slider_content1`, `slider_content2`, `slider_content3`, `created_at`, `updated_at`) VALUES
-(4, 'slider/Doctor1st.png', '10 Years Experience', 'Dr Mahdi Alsaffar', 'Dr Mahdi Alsaffar is an Orthopaedic surgeon specialized in Shoulder, Upper Extremity Trauma and sport medicine', '10 سنوات خبرة', 'دكتور مهدي صفار', 'الدكتور مهدي الصفار هو جراح عظام متخصص في إصابات الكتف والأطراف العلوية والطب الرياضي', '2024-04-03 15:55:01', '2024-04-03 15:56:29');
 
 -- --------------------------------------------------------
 
@@ -190,7 +193,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'karim', 'karimadmin@gmail.com', NULL, '$2y$10$gqFgMdKFZeqwKYMjK9xykOIiKYmZ1dCoBGTYEdBqgIfIy85zlniHi', NULL, '2024-04-03 15:39:57', '2024-04-03 15:39:57');
+(1, 'karim', 'karimadmin@gmail.com', NULL, '$2y$10$vluGNDu8.Ow9UpA./e1leOxUAerhg8lW7mRsHGfRRf305AaRuKyWK', 'y3h6ksyVQHccAgSLnqkheTtgYUG9hwViJleNSSQjbsNIKLrzkDCakoNg7Y6x', '2024-04-02 15:22:43', '2024-04-02 15:22:43');
 
 -- --------------------------------------------------------
 
@@ -200,26 +203,22 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 
 CREATE TABLE `whychooseuses` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `section_title_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `section_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `section_sub_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `section_sub` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `section_desc_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `section_desc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_title_1_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_title_2_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_title_3_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_title_4_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_title_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_title_2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_title_3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_title_4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_counter_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_counter_2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_counter_3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `box_counter_4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `section_title_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `section_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `section_sub_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `section_sub` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `section_desc_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `section_desc` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `box_title_1_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `box_title_2_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `box_title_3_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `box_title_4_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `box_title_1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `box_title_2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `box_title_3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `box_title_4` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -308,19 +307,19 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`

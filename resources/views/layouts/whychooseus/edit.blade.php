@@ -130,8 +130,6 @@
                                         <input type="text" value="{{ $whychooseus->box_counter_4 }}" name="box_counter_4" class="form-control form-control-sm">
                                     </div>
                                 </div>
-                                box_counter_1
-                                
                                 
                                 
                                 <div class="mb-3 row">
