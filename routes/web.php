@@ -23,6 +23,8 @@ Route::resource('Slider', '\App\Http\Controllers\SliderController');
 Route::resource('Whychooseus', '\App\Http\Controllers\WhychooseusController');
 Route::resource('Banner', '\App\Http\Controllers\BannerSectionController');
 Route::resource('Menu', '\App\Http\Controllers\MenuController');
+Route::resource('Testimonial', '\App\Http\Controllers\TestimonialController');
+
 
 
 

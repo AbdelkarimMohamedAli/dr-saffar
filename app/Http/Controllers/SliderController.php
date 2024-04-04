@@ -41,7 +41,12 @@ class SliderController extends Controller
     {
         //
         $slider=new slider();
+        if($request->slider_image){
 
+            $imageslider_image=$request->file('slider_image')->getClientOriginalName();
+            $pathslider_image=$request->file('slider_image')->storeAs('slider',$imageslider_image);
+            $slider->slider_image=$pathslider_image;
+        }
         $slider->slider_content1_en=$request->slider_content1_en;
         $slider->slider_content2_en=$request->slider_content2_en;
         $slider->slider_content3_en=$request->slider_content3_en;
@@ -49,7 +54,7 @@ class SliderController extends Controller
         $slider->slider_content2=$request->slider_content2;
         $slider->slider_content3=$request->slider_content3;
         $slider->save();
-        return redirect()->route('Whychooseus.index');
+        return redirect()->route('Slider.index');
 
     }
 
@@ -113,11 +118,6 @@ class SliderController extends Controller
                 
             ]);
             return redirect()->route('Slider.index');
-
-
-
-    
-        
     }
 
     /**

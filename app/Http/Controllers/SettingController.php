@@ -51,21 +51,29 @@ class SettingController extends Controller
         $setting->phone2=$request->phone2;
         $setting->whatsapp=$request->whatsapp;
         $setting->email=$request->email;
-        $imagelogo=$request->file('logo')->getClientOriginalName();
-        $pathlogo=$request->file('logo')->storeAs('setting',$imagelogo);
-        $setting->logo=$pathlogo;
+        if($request->logo){
+            $imagelogo=$request->file('logo')->getClientOriginalName();
+            $pathlogo=$request->file('logo')->storeAs('setting',$imagelogo);
+            $setting->logo=$pathlogo;
+        }
+
+        
         $setting->open_hours_en=$request->open_hours_en;
         $setting->open_hours=$request->open_hours;
         $setting->location_en=$request->location_en;
         $setting->location=$request->location;
         $setting->subtitle_en=$request->subtitle_en;
         $setting->subtitle=$request->subtitle;
-        $imagefavicon=$request->file('favicon')->getClientOriginalName();
-        $pathfavicon=$request->file('logo')->storeAs('setting',$imagefavicon);
-        $setting->favicon=$pathfavicon;
-        $imagedr_image=$request->file('dr_image')->getClientOriginalName();
-        $pathdr_image=$request->file('dr_image')->storeAs('setting',$imagedr_image);
-        $setting->dr_image=$pathdr_image;
+        if($request->favicon){
+            $imagefavicon=$request->file('favicon')->getClientOriginalName();
+            $pathfavicon=$request->file('logo')->storeAs('setting',$imagefavicon);
+            $setting->favicon=$pathfavicon;
+        }
+        if($request->dr_image){
+            $imagedr_image=$request->file('dr_image')->getClientOriginalName();
+            $pathdr_image=$request->file('dr_image')->storeAs('setting',$imagedr_image);
+            $setting->dr_image=$pathdr_image;
+        }
 
         $setting->dr_name_en=$request->dr_name_en;
         $setting->dr_name=$request->dr_name;
