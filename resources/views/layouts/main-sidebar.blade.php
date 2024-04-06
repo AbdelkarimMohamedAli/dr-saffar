@@ -74,28 +74,22 @@
 						</ul>
 
                     </li>
-
-                    
-                    
-                    
-                    
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()"  aria-expanded="false">
+                        <i class="flaticon-381-networking"></i>
+							<span class="nav-text">Blog</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="index.html">Dashboard &nbsp; 1</a></li>
-							<li><a href="index-2.html">Dashboard &nbsp; 2</a></li>
-							<li><a href="index-3.html">Dashboard &nbsp; 3</a></li>
-							<li><a href="index-4.html">Dashboard Dark</a></li>
-							<li><a href="coin-details.html">Coin Details</a></li>
-							<li><a href="my-wallets.html">My Wallets</a></li>
-							<li><a href="transactions.html">Transactions</a></li>
-							<li><a href="portofolio.html">Portofolio</a></li>
-							<li><a href="market-capital.html">Market Capital</a></li>
+							<li><a href="{{ url('/Blog') }}">Blog</a></li>
 						</ul>
-
+                        <ul aria-expanded="false">
+							<li><a href="{{ url('/Blog/create') }}">create</a></li>
+						</ul>
                     </li>
+
+                    
+                    
+                    
+        
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 						<i class="flaticon-381-television"></i>
 							<span class="nav-text">Apps</span>
