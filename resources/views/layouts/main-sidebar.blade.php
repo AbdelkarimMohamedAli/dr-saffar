@@ -85,6 +85,18 @@
 							<li><a href="{{ url('/Blog/create') }}">create</a></li>
 						</ul>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()"  aria-expanded="false">
+                        <i class="flaticon-381-networking"></i>
+							<span class="nav-text">DoctorSection</span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="{{ url('/DoctorSection') }}">DoctorSection</a></li>
+						</ul>
+                        <ul aria-expanded="false">
+							<li><a href="{{ url('/DoctorSection/create') }}">create</a></li>
+						</ul>
+                    </li>
+                    
 
                     
                     

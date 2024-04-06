@@ -25,6 +25,8 @@ Route::resource('Banner', '\App\Http\Controllers\BannerSectionController');
 Route::resource('Menu', '\App\Http\Controllers\MenuController');
 Route::resource('Testimonial', '\App\Http\Controllers\TestimonialController');
 Route::resource('Blog', '\App\Http\Controllers\BlogController');
+Route::resource('DoctorSection', '\App\Http\Controllers\DoctorSectionController');
+
 
 
 
