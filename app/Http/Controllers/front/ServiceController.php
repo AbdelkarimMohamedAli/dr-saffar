@@ -19,9 +19,8 @@ class ServiceController extends Controller
     {
         
         $service=service::findOrFail($id);
-        $setting=setting::all()->toArray();
         $services=service::all();
 
-        return view('front.services_details',compact(['services','setting','service']));
+        return view('front.services_details',compact(['services','service']));
     }
 }
