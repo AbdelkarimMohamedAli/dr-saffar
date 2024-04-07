@@ -7,17 +7,17 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget">
                     <div class="widget-logo">
-                        <img src="assets/images/<?php echo $row_settings['logo']; ?>" class="black-logo" alt="image">
-                        <img src="assets/images/<?php echo $row_settings['logo']; ?>" class="white-logo" alt="image">
+                        <img src="{{ asset('assets/imgs/'.$settings[0]['logo'] ) }}" class="black-logo" alt="image">
+                        <img src="{{ asset('assets/imgs/'.$settings[0]['logo'] ) }}" class="white-logo" alt="image">
                     </div>
                     
-                    <p style="text-align:justify"><?php echo $row_settings['subtitle']; ?></p>
+                    <p style="text-align:justify">{{ $settings[0]['subtitle_en'] }}</p>
 
                   
                     <div class="widget-info">
-                        <img src="assets/images/doctors-details/<?php echo $row_settings['dr_image']; ?>" alt="image">
-                        <h4><?php echo $row_settings['dr_name']; ?></h4>
-                        <span><?php echo $row_settings['email']; ?></span>
+                        <img src="{{ asset('assets/imgs/'.$settings[0]['dr_image'] ) }}" alt="image">
+                        <h4>{{ $settings[0]['dr_name'] }}</h4>
+                        <span>{{ $settings[0]['email'] }}</span>
                     </div>
                 </div>
             </div>

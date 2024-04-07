@@ -39,6 +39,9 @@ Route::resource('Service', '\App\Http\Controllers\ServiceController');
 });
 
 
+Route::get('/Blogs', 'App\Http\Controllers\front\BlogController@index');
+Route::get('medical_news/{id}', 'App\Http\Controllers\front\BlogController@show')->name('medical_news.show');
+
 
 
 
