@@ -24,20 +24,20 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget ps-5">
-                    <h3><?php   if(session('locale') == 'en'){?> Useful Link  <?php }else{ ?>  روابط مختصرة   <?php } ?></h3>
+                    <h3> Useful Link</h3>
 
                     <ul class="quick-links">
                         <li>
-                            <a href="about"><?php   if(session('locale') == 'en'){?> About Us  <?php }else{ ?>   من نحن  <?php } ?> </a>
+                            <a href="about"> About Us   </a>
                         </li>
                         <li>
-                            <a href="medical"><?php echo $lang['Latest-News']; ?></a>
+                            <a href="medical">Latest-News</a>
                         </li>
                         <li>
-                            <a href="contact"><?php   if(session('locale') == 'en'){?> Contact Us  <?php }else{ ?>   اتصل بنا  <?php } ?> </a>
+                            <a href="contact"> Contact Us </a>
                         </li>
                         <li>
-                            <a href="services"><?php echo $lang['Our-Services']; ?></a>
+                            <a href="services">Our-Services</a>
                         </li>
                     </ul>
                 </div>
@@ -45,18 +45,19 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget">
-                    <h3><?php echo $lang['Latest-News']; ?></h3>
+                    <h3>Latest-News</h3>
                     
                     <div class="footer-widget-blog">
-                    <?php  foreach($result_blog as $blogrow){ ?> 
+                    <?php  foreach($blogs as $blog){ ?> 
                         <article class="item">
-                            <a href="medical_news?id=<?php echo $blogrow['id']; ?>&<?php echo $blogrow['blog_title']; ?>" class="thumb">
+                            <a href="{{ route('medical_news.show', ['id' => $blog->id]) }}" class="thumb">
                                 
-                                <img src="assets/images/blog/<?php echo $blogrow['blog_img']; ?>" class="fullimage">
+                                <img src="{{ asset('assets/imgs/'.$blog->dr_image) }}" class="fullimage">
                             </a>
                             <div class="info">
-                                <h4><a href="medical_news?id=<?php echo $blogrow['id']; ?>&<?php echo $blogrow['blog_title']; ?>"><?php echo $blogrow['blog_title']; ?></a></h4>
-                                <span><a href="medical_news?id=<?php echo $blogrow['id']; ?>&<?php echo $blogrow['blog_title']; ?>">By Dr.Alsaffar</a></span>
+                            
+                                <h4><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}">{{ $blog->blog_title_en }}</a></h4>
+                                <span><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}">{{ $settings[0]['title']}}</a></span>
                             </div>
                         </article>
                     <?php }?>
@@ -66,25 +67,25 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget ps-3">
-                    <h3><?php   if(session('locale') == 'en'){?> Contact Information  <?php }else{ ?>   بيانات الإتصال  <?php } ?></h3>
+                    <h3> Contact Information</h3>
 
                     <ul class="footer-information">
                         <li>
                             <i class="ri-phone-fill"></i>
-                            <h4><a href="tel:<?php echo $row_settings['phone1']; ?>"><?php echo $row_settings['phone1']; ?></a></h4>
-                            <span> <?php   if(session('locale') == 'en'){?>  Call Today <?php }else{ ?>  اتصل الان   <?php } ?>  </span>
+                            <h4><a href="tel:{{ $settings[0]['phone1']}}">{{ $settings[0]['phone1']}}</a></h4>
+                            <span>   Call Today </span>
                         </li>
 
                         <li>
                             <i class="ri-time-line"></i>
-                            <h4><?php echo $row_settings['open_hours']; ?></h4>
-                            <span><?php   if(session('locale') == 'en'){?>Open Hour<?php }else{ ?> ساعات العمل <?php } ?></span>
+                            <h4>{{ $settings[0]['open_hours']}}</h4>
+                            <span>Open Hour</span>
                         </li>
 
                         <li>
                             <i class="ri-map-pin-line"></i>
-                            <h4><?php echo $row_settings['location']; ?></h4>
-                            <span> <?php   if(session('locale') == 'en'){?> Our Location  <?php }else{ ?> العنوان <?php } ?> </span>
+                            <h4>{{ $settings[0]['location']}}</h4>
+                            <span> Our Location  </span>
                         </li>
                     </ul>
 
@@ -103,11 +104,9 @@
         <div class="container">
             <div class="copyright-area-content">
                 <p>
-                <?php   if(session('locale') == 'en'){?>
+               
                     Copyright @ <script>document.write(new Date().getFullYear())</script> All Rights Reserved.
-                <?php }else{ ?>
                                 جميع الحقوق محفوظة -  <script>document.write(new Date().getFullYear()) </script>
-                <?php } ?>
                 </p>
             </div>
         </div>
@@ -122,7 +121,7 @@
 <!-- End Go Top Area -->
 
 <!-- Links of JS files -->
-<?php   if(session('locale') == 'en'){?>
+    <!-- @if(session('locale') == 'en')  -->
 
 <script src="{{ URL::asset('front/js/jquery.min.js')}}"></script>
 <script src="{{ URL::asset('front/js/bootstrap.bundle.min.js')}}"></script>
@@ -141,8 +140,7 @@
 <script src="{{ URL::asset('front/js/contact-form-script.js')}}"></script>
 <script src="{{ URL::asset('front/js/wow.min.js')}}"></script>
 <script src="{{ URL::asset('front/js/main.js')}}"></script>
-
-<?php }else{ ?>
+<!-- @else
     <script src="{{ URL::asset('assets_rtl/js/jquery.min.js')}}"></script>
     <script src="{{ URL::asset('assets_rtl/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ URL::asset('assets_rtl/js/jquery.meanmenu.js')}}"></script>
@@ -160,6 +158,6 @@
     <script src="{{ URL::asset('assets_rtl/js/contact-form-script.js')}}"></script>
     <script src="{{ URL::asset('assets_rtl/js/wow.min.js')}}"></script>
     <script src="{{ URL::asset('assets_rtl/js/main.js')}}"></script>
-<?php } ?>    
+    @endif -->
 </body>
 </html>

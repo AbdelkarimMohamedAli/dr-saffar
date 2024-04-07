@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\menu;
 use App\Models\setting;
+use App\Models\blog;
+
 
 
 
@@ -17,8 +19,9 @@ class HomeController extends Controller
          $settings=setting::all()->toArray();
         //$settings = Setting::all()->pluck('value', 'key')->toArray();
         $menus=menu::all();
+        $blogs=blog::all();
 
 
-        return view('home',compact(['settings','menus']));
+        return view('home',compact(['settings','menus','blogs']));
     }
 }
