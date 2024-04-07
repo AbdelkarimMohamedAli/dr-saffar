@@ -5,12 +5,14 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="<?php echo $row_settings['seo_desc']; ?>">
-        <meta name="keywords" content="<?php echo $row_settings['seo_keywords']; ?>">
+
+        <meta name="keywords" content="{{ $settings[0]['seo_keywords'] }}"> 
+        <meta name="description" content="{{ $settings[0]['seo_desc'] }}">
+
         
         <meta name="author" content="Eng. Mohamed Khaled Hekal">
         <!-- Links of CSS files -->
-        @if(session('locale') == 'en')
+        <!-- @if(session('locale') == 'en') -->
 
 
         <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
@@ -30,7 +32,7 @@
         <link rel="stylesheet" href="{{asset('front/css/footer.css')}}">
         <link rel="stylesheet" href="{{asset('front/css/dark.css')}}">
 		<link rel="stylesheet" href="{{asset('front/css/responsive.css')}}">
-        @else
+        <!-- @else
 
         <link rel="stylesheet" href="{{asset('assets_rtl/css/bootstrap.rtl.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets_rtl/css/aos.css')}}">
@@ -50,15 +52,18 @@
         <link rel="stylesheet" href="{{asset('assets_rtl/css/dark.css')}}">
 		<link rel="stylesheet" href="{{asset('assets_rtl/css/responsive.css')}}">
 		<link rel="stylesheet" href="{{asset('assets_rtl/css/rtl.css')}}">
-         @endif
+         @endif -->
   
-		<title><?php echo $row_settings['title']; ?></title>
+         <title>{{ $settings[0]['title'] }}</title>
+         
 <style>
     .pb-75MM {
     padding-bottom: -6px;
 }
 </style>
-        <link rel="icon"  href="assets/images/<?php echo $row_settings['favicon']; ?>">
+        
+        <link rel="icon"  href="assets/imgs/{{ $settings[0]['favicon'] }}">
+
     </head>
 
     <body>
@@ -86,8 +91,8 @@
                     <div class="main-responsive-menu">
                         <div class="logo">
                             <a href="index">
-                                <img style="width:80px" src="assets/images/<?php echo $row_settings['logo']; ?>" class="black-logo" alt="image">
-                                <img style="width:80px" src="assets/images/<?php echo $row_settings['logo']; ?>" class="white-logo" alt="image">
+                                <img style="width:80px" src="assets/imgs/{{ $settings[0]['logo'] }}" class="white-logo" alt="image">
+                                <img style="width:80px" src="assets/imgs/{{ $settings[0]['logo'] }}" class="white-logo" alt="image">
                             </a>
                         </div>
                     </div>
@@ -100,11 +105,11 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="index">
-                        <img style="width:80px" src="assets/images/<?php echo $row_settings['logo']; ?>" class="black-logo" alt="image">
-                                <img style="width:80px" src="assets/images/<?php echo $row_settings['logo']; ?>" class="white-logo" alt="image">
+                        <img style="width:80px" src="assets/imgs/{{ $settings[0]['logo'] }}" class="black-logo" alt="image">
+                                <img style="width:80px" src="assets/imgs/{{ $settings[0]['logo'] }}" class="white-logo" alt="image">
                         </a>
-                      
-                    @include('front.menu')
+                        @include('front.menu')
+
 
                     </nav>
                 </div>

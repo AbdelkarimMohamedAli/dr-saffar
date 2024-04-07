@@ -56,6 +56,9 @@
                                         <a class="dropdown-item"href="{{ route('Blog.edit', $blog->id) }}"  >edit</a>        
 
                                         </button>
+                                        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#delete{{ $blog->id }}">deletee</button>
+
+                                        
 
                                         <form action="{{route('Blog.destroy','test')}}" method="post">
                                                     {{method_field('Delete')}}
@@ -82,7 +85,68 @@
                                             <td>{{ $blog->blog_date }}</td>
                                         </tr>
                                         
-
+                                <!-- <div class="modal fade" id="delete{{ $blog->id }}" tabindex="-1" role="dialog"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title"
+                                                    id="exampleModalLabel">
+                                                    are you delete
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="{{route('Blog.destroy','test')}}" method="post">
+                                                    {{method_field('Delete')}}
+                                                    @csrf
+                                                    Warning_Blog
+                                                    <input id="id" type="hidden" name="id" class="form-control"
+                                                           value="{{ $blog->id }}">
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        <button type="submit"
+                                                                class="btn btn-danger">submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="modal fade" id="delete{{ $blog->id }}">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Modal title</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="{{route('Blog.destroy','test')}}" method="post">
+                                                        {{method_field('Delete')}}
+                                                        @csrf
+                                                        Warning_Blog
+                                                        <input id="id" type="hidden" name="id" class="form-control"
+                                                            value="{{ $blog->id }}">
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                            <button type="submit"
+                                                                    class="btn btn-danger">submit</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger light" >Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     @endforeach                                           
                                 </tbody>
                                

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,12 +14,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function()
-	{
-		return view('home');
-	});
+// Route::get('/', function()
+// 	{
+// 		return view('home');
+// 	});
+
+	Route::get('/', [HomeController::class, 'index']);
+
+
+
 Route::get('/setlocale/{locale}', 'LocaleController@setLocale')->name('setlocale');
-; 
+Route::middleware(['auth'])->group(function () {
+
 Route::resource('Setting', '\App\Http\Controllers\SettingController');
 Route::resource('Slider', '\App\Http\Controllers\SliderController');
 Route::resource('Whychooseus', '\App\Http\Controllers\WhychooseusController');
@@ -26,9 +34,9 @@ Route::resource('Menu', '\App\Http\Controllers\MenuController');
 Route::resource('Testimonial', '\App\Http\Controllers\TestimonialController');
 Route::resource('Blog', '\App\Http\Controllers\BlogController');
 Route::resource('DoctorSection', '\App\Http\Controllers\DoctorSectionController');
+Route::resource('Service', '\App\Http\Controllers\ServiceController');
 
-
-
+});
 
 
 
