@@ -32,7 +32,7 @@
             </div>
 
             <center>   <div class="why-choose-btn">
-                    <a href="{{ route('blogs') }}" class="default-btn">clickAll</a> 
+                    <a href="#" class="default-btn">clickAll</a> 
                 </div></center>
         </div>
         <!-- End Blog Area -->

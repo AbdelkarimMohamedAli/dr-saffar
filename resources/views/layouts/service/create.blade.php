@@ -59,7 +59,9 @@
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label col-form-label-sm">services_desc</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="services_desc" class="form-control form-control-sm">
+                                    <textarea name="services_desc" rows="10" cols="80"></textarea>
+
+                                        <!-- <input type="text" name="services_desc" class="form-control form-control-sm"> -->
                                     </div>
                                 </div>
                                 <div class="mb-3 row">

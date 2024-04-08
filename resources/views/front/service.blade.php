@@ -12,9 +12,9 @@
                         <li>Our-Services</li>
                     </ul>
                 </div>
-
+                
                 <div class="page-banner-image" data-speed="0.08" data-revert="true">
-                    <img src="assets/images/page-banner/banner-1.png" data-aos="fade-left" data-aos-delay="80" data-aos-duration="800" alt="image">
+                    <img src="{{ asset('assets/images/page-banner/banner-1.png') }}" data-aos="fade-left" data-aos-delay="80" data-aos-duration="800" alt="image">
                 </div>
             </div>
         </div>
@@ -50,7 +50,8 @@
                         </div>
 
                         <div class="services-shape-1">
-                            <img src="assets/images/services/shape-1.png" alt="image">
+                        
+                            <img src="{{ asset('assets/images/services/shape-1.png') }}" alt="image">
                         </div>
                     </div>
                 </div>
@@ -59,7 +60,9 @@
              
      
  
-                </div>
+            <center>   <div class="why-choose-btn">
+                    <a href="#services" class="default-btn">clickAll</a> 
+                </div></center>
             </div>
         </div>
         <!-- End Blog Area -->
