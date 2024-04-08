@@ -23,7 +23,7 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::get('/setlocale/{locale}', 'LocaleController@setLocale')->name('setlocale');
+Route::get('/setlocale/{locale}', '\App\Http\Controllers\LocaleController@setLocale')->name('setlocale');
 Route::middleware(['auth'])->group(function () {
 
 Route::resource('Setting', '\App\Http\Controllers\SettingController');

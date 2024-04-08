@@ -2,9 +2,9 @@
   <div class="home-slides owl-carousel owl-theme">
   <!-- item-bg2 -->
        
-<?php  foreach($sliders as $slider){ ?>
+<?php  foreach($sliders as $slider){ ?>  
     
-            <div class="main-slides-item"  style="background-image: url({{ $slider->slider_image }});">
+            <div class="main-slides-item"  style="background-image: url({{ asset('assets/imgs/'.$slider->slider_image) }});">
                 <div class="container">
                     <div class="main-slides-content" data-speed="0.06" data-revert="true">
                         <span data-aos="fade-right" data-aos-delay="30" data-aos-duration="300">{{ $slider->slider_content1 }}</span>

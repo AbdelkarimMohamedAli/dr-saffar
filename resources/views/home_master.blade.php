@@ -1,5 +1,5 @@
 
- <!doctype html>
+<!doctype html>
 <html lang="ar">
     <head>
         <!-- Required meta tags -->
@@ -11,25 +11,30 @@
 
         
         <meta name="author" content="Eng. Mohamed Khaled Hekal">
+        <link rel="stylesheet" href="sss">
+
+        <!-- Links of CSS files -->
+        <!-- @if(session('locale') == 'en') -->
+
 
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/aos.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/animate.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/meanmenu.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/remixicon.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/odometer.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/owl.theme.default.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/jquery-ui.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/magnific-popup.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/fancybox.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/selectize.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/navbar.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/footer.css') }}">
-        <link rel="stylesheet" href="{{ asset('front/css/dark.css') }}">
-		<link rel="stylesheet" href="{{ asset('front/css/responsive.css') }}">
-       
+        <link rel="stylesheet" href="{{asset('front/css/aos.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/animate.min.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/meanmenu.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/remixicon.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/odometer.min.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.min.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/jquery-ui.min.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/magnific-popup.min.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/fancybox.min.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/selectize.min.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/navbar.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/footer.css')}}">
+        <link rel="stylesheet" href="{{asset('front/css/dark.css')}}">
+		<link rel="stylesheet" href="{{asset('front/css/responsive.css')}}">
+        
   
          <title>{{ $settings[0]['title'] }}</title>
          
@@ -56,7 +61,7 @@
         <!-- End Preloader Area -->
 
         <!-- Start Navbar Area -->
-        <div class="navbar-area fixed-top" style="background: var(--white-color);
+        <div class="navbar-area fixed-top" style="<?php   if(session('locale') == 'ar'){?>direction:rtl; <?php } ?> background: var(--white-color);
         -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
                 box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
         -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
@@ -136,19 +141,22 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
                 </div>
             </div>
             <!-- Empty Area -->
-@include('front.slider')
-@include('front.book-appointment_section')
-@include('front.why-choose_section')
-@include('front.services_section')
-@include('front.doctor-Area_section')
-@include('front.blog')
+
+            
+            @include('front.slider')
+            @include('front.book-appointment_section')
+            @include('front.why-choose_section')
+            @include('front.services_section')
+            @include('front.doctor-Area_section')
+            @include('front.blog')
+
 
 
 
 
 <!-- Start Footer Area -->
 <footer class="footer-area pt-100">
-    <div class="container">
+    <div class="container"  <?php   if(session('locale') == 'ar'){?> dir="rtl" <?php } ?>>
         <div class="row justify-content-center">
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget">
@@ -288,3 +296,5 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
 
 </body>
 </html>
+
+
