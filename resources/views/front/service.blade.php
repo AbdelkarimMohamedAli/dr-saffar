@@ -60,9 +60,7 @@
              
      
  
-            <center>   <div class="why-choose-btn">
-                    <a href="#services" class="default-btn">clickAll</a> 
-                </div></center>
+           
             </div>
         </div>
         <!-- End Blog Area -->

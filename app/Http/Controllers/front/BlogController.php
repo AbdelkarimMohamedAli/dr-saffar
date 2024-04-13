@@ -19,9 +19,16 @@ class BlogController extends Controller
     //
     public function index()
     {
-        
+        $settings=setting::all()->toArray();
+        $menus=menu::all();
         $blogs=blog::all();
-        return view('front.blog',compact('blogs'));
+        $sliders=slider::all();
+        $banner_section=banner_section::all()->toArray();
+        $whychooseus=whychooseus::all()->toArray();
+        $doctor_section=doctor_section::all()->toArray();
+        $setting=setting::all()->toArray();
+
+        return view('front.blog',compact(['blogs','setting','settings','menus','sliders','banner_section','whychooseus','doctor_section']));
     }
     public function show(Request $request,$id)
     {
