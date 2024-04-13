@@ -1,4 +1,6 @@
 
+ {{session('locale')}}
+ 
  <!doctype html>
 <html lang="ar">
     <head>
@@ -11,6 +13,19 @@
             <meta name="description" content="<?php if(!empty($settings)){ $settings[0]['seo_desc'];  }?>">
         
         <meta name="author" content="Eng. Mohamed Khaled Hekal">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+<style>
+
+*,h1,h2,h3,h4,h5,h6,span,div,select,header,footer  {
+  font-family: "Cairo", sans-serif;
+}
+</style>
+
+
         @if(session('locale') == 'en')
 
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
@@ -31,6 +46,7 @@
         <link rel="stylesheet" href="{{ asset('front/css/dark.css') }}">
 		<link rel="stylesheet" href="{{ asset('front/css/responsive.css') }}">
         @else
+        
         <link rel="stylesheet" href="{{ asset('assets_rtl/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets_rtl/css/aos.css') }}">
         <link rel="stylesheet" href="{{ asset('assets_rtl/css/animate.min.css') }}">

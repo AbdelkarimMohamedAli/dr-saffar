@@ -10,7 +10,7 @@
                             <p>@if(session('locale') == 'en')<?php if(!empty($doctor_section)){ ?> {{ $doctor_section[0]['section_desc_en']}}<?php } ?> @else {{ $doctor_section[0]['section_desc']}} @endif</p>
 
                             <div class="healthcare-btn">
-                                <a href="#" class="default-btn"><?php   if(session('locale') == 'en'){?> Contact Us  <?php }else{ ?> اتصل بنا <?php } ?></a>
+                                <a href="{{ route('contact') }}" class="default-btn"><?php   if(session('locale') == 'en'){?> Contact Us  <?php }else{ ?> اتصل بنا <?php } ?></a>
                             </div>
 
                             <div class="healthcare-stethoscope">

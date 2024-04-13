@@ -16,6 +16,7 @@
         <!-- Links of CSS files -->
         <!-- @if(session('locale') == 'en') -->
 
+        
 
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{asset('front/css/aos.css')}}">

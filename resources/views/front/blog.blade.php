@@ -5,8 +5,8 @@
                     <span><?php   if(session('locale') == 'en'){?> Latest-News  <?php }else{ ?>  اخر الأخبار  <?php } ?></span>
                     <h2><?php   if(session('locale') == 'en'){?> Keep Up With Our Most Recent Medical News  <?php }else{ ?>  مواكبة أحدث الأخبار الطبية لدينا  <?php } ?></h2>
                 </div>
-                <?php  foreach($blogs as $blog){ ?>    
                     <div class="blog-slides owl-carousel owl-theme">
+                    @foreach($blogs as $blog)
                         <div class="blog-card-item">
                             <div class="image">
                                 <a href="{{ route('medical_news.show', ['id' => $blog->id]) }}"><img src="{{ asset('assets/imgs/'.$blog->blog_img) }}" alt="image"></a>
@@ -22,8 +22,8 @@
                                 <a href="{{ route('medical_news.show', ['id' => $blog->id]) }}" class="blog-btn"><?php   if(session('locale') == 'en'){?> Read-More  <?php }else{ ?> اقرا أكثر <?php } ?></a>
                             </div>
                         </div>
+                   @endforeach
                     </div>
-                <?php }?>
             </div>
 
             <div class="blog-shape-1" data-speed="0.09" data-revert="true">

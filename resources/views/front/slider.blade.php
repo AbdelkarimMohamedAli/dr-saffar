@@ -12,7 +12,7 @@
                         <p data-aos="fade-right" data-aos-delay="50" data-aos-duration="500">@if(session('locale') == 'en') {{ $slider->slider_content3 }} @else {{ $slider->slider_content3_en }} @endif</p>
                         
                         <div class="slides-btn" data-aos="fade-right" data-aos-delay="60" data-aos-duration="600">
-                            <a href="#" class="default-btn">@if(session('locale') == 'en') Contact Now @else احجز الان @endif</a>
+                            <a href="{{ route('contact')}}" class="default-btn">@if(session('locale') == 'en') Contact Now @else احجز الان @endif</a>
                         </div>
                         
                     </div>

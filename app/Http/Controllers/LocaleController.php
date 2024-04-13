@@ -7,16 +7,13 @@ use Illuminate\Http\Request;
 class LocaleController extends Controller
 {
     //
-    public function setLocale($locale)
+    public function setLocale(Request $request,$locale)
     {
-        // Validate the locale to prevent arbitrary values
-        $supportedLocales = ['en', 'ar']; // Add more locales as needed
-        if (!in_array($locale, $supportedLocales)) {
-            abort(404);
-        }
+        
+         $request->session()->put('locale', $locale);
+        // $request->session()->put(['locale'=>$locale]);
 
-        // Set the locale in the session
-        session()->put('locale', $locale);
+
 
 
         return redirect()->back(); // Redirect back to the previous page

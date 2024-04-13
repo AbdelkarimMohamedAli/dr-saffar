@@ -21,9 +21,21 @@ use App\Http\Controllers\HomeController;
 
 	Route::get('/', [HomeController::class, 'index']);
 
+    // Route::get('/setlocale/{locale}', function ($locale) {
+    //     // Check if the selected locale is Arabic
+    //     if ($locale === 'ar') {
+    //         // Set session variable to 'ar'
+    //         session()->put('locale', 'ar');
+    //     } else {
+    //         session()->put('locale', 'en');
+    //         // Handle other languages if needed
+    //     }
+    
+    //     // Redirect back or to any other page
+    //     return redirect()->back();
+    // })->name('setlocale');
 
-
-Route::get('/setlocale/{locale}', '\App\Http\Controllers\LocaleController@setLocale')->name('setlocale');
+Route::get('setlocale/{locale}', '\App\Http\Controllers\LocaleController@setLocale')->name('setlocale');
 Route::middleware(['auth'])->group(function () {
 
 Route::resource('Setting', '\App\Http\Controllers\SettingController');
