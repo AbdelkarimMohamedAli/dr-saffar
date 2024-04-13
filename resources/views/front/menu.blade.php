@@ -5,16 +5,20 @@
          @if($menu->parent == 0)
             <li class='nav-item'> 
                 <a class='nav-link' href="">{{ $menu->label }}</a>
-                @foreach($menus as $menu2)
-                    @if($menu2->parent == $menu->id)
-                    <ul class="dropdown-menu">
-                        <li class='nav-item'>
-                        <a class='nav-link' href="">{{ $menu2->label }}</a> 
-                        </li> 
+                @if($menu->parent != 0)
+                    <ul class="dropdown-menu"> 
+                    @foreach($menus as $menu2)
+                        @if($menu2->parent == $menu->id)
+                            <li class='nav-item'>
+                            <a class='nav-link' href="">{{ $menu2->label }}</a>
+                           
+                            </li>
+    
+                        @endif
+                    @endforeach
                     </ul>
-                    @endif
-                @endforeach
-            
+                @endif
+                
             </li>
         @else         @continue   @endif
              

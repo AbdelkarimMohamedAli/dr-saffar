@@ -178,9 +178,11 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget">
                     <div class="widget-logo">
+                    <?php if(!empty($settings)){ ?>
                         <img src="{{ asset('assets/imgs/'.$settings[0]['logo'] ) }}" class="black-logo" alt="image">
                         <img src="{{ asset('assets/imgs/'.$settings[0]['logo'] ) }}" class="white-logo" alt="image">
                     </div>
+                    <?php } ?>
                     
                     <p style="text-align:justify">@if(session('locale') == 'en')<?php if(!empty($settings)){ ?> {{ $settings[0]['subtitle_en'] }}<?php } ?> @else {{ $settings[0]['subtitle'] }} @endif</p>
 

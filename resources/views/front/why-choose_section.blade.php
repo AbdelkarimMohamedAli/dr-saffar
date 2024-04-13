@@ -50,7 +50,7 @@
                             <h3>@if(session('locale') == 'en')<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['section_sub_en'] }}<?php } ?> @else {{ $whychooseus[0]['section_sub'] }} @endif</h3>
                             <p>@if(session('locale') == 'en')<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['section_desc_en'] }}<?php } ?> @else {{ $whychooseus[0]['section_desc'] }} @endif</p>  
                             <div class="why-choose-btn"><?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['section_desc_en'] }}<?php } ?>
-                                <a href="#" class="default-btn">Contactus</a>  Or  <a  style="color:red;" href="tel:<?php if(!empty($whychooseus)){ ?>{{ $settings[0]['phone1'] }}<?php } ?>" class="primary-btn">Call Us Now</a>
+                                <a href="#" class="default-btn">Contactus</a>  Or  <a  style="color:red;" href="tel:<?php if(!empty($settings)){ ?>{{ $settings[0]['phone1'] }}<?php } ?>" class="primary-btn">Call Us Now</a>
                             </div>
                         </div>
                     </div>

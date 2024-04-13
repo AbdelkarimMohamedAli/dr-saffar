@@ -17,6 +17,7 @@
 <script src="{{ URL::asset('assets/js/demo.js')}}"></script>
 <script src="{{ URL::asset('assets/js/styleSwitcher.js')}}"></script>
 
+
 	<script>
 		function carouselReview(){
 			jQuery('.testimonial-one').owlCarousel({
