@@ -34,7 +34,7 @@
 
                 </div>
               <center>   <div class="why-choose-btn">
-                    <a href="#services" class="default-btn">clickAll</a> 
+                    <a href="{{ route('Services') }}" class="default-btn">clickAll</a> 
                 </div></center>
             </div>
         </div>
