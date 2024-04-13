@@ -31,8 +31,6 @@
                 
             </div>
 
-            <center>   <div class="why-choose-btn">
-                    <a href="#" class="default-btn">clickAll</a> 
-                </div></center>
+            
         </div>
         <!-- End Blog Area -->
