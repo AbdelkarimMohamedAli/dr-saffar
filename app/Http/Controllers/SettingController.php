@@ -40,6 +40,7 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         //
+       
         
         $setting=new setting();
         
@@ -123,7 +124,27 @@ class SettingController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request,$id, setting $setting)
-    {
+    {   
+        $validated = $request->validate([
+            'title_en' => 'required',
+            'title' => 'required',
+            'seo_keywords' => 'required',
+            'seo_desc' => 'required',
+            'phone1' => 'required',
+            'phone2' => 'required',
+            'whatsapp' => 'required',
+            'email' => 'required',
+            'open_hours_en' => 'required',
+            'open_hours' => 'required',
+            'location_en' => 'required',
+            'location' => 'required',
+            'subtitle_en' => 'required',
+            'subtitle' => 'required',
+            'dr_name_en' => 'required',
+            'dr_name' => 'required',
+       
+
+        ]);
         
         $setting=setting::findOrFail($id);
 

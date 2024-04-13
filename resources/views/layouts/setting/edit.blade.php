@@ -17,6 +17,15 @@
                         <h4 class="card-title">Setting</h4>
                     </div>
                     <div class="card-body">
+                    @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
                         <div class="basic-form">
                             <form action="{{ route('Setting.update',$setting->id) }}" method="POST"  enctype="multipart/form-data">
                             {{ method_field('patch') }}
