@@ -19,9 +19,16 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        
+        $settings=setting::all()->toArray();
+        $menus=menu::all();
+        $blogs=blog::all();
+        $sliders=slider::all();
+        $banner_section=banner_section::all()->toArray();
+        $whychooseus=whychooseus::all()->toArray();
+        $doctor_section=doctor_section::all()->toArray();
+
         $services=service::all();
-        return view('front.service',compact('services'));
+        return view('front.service',compact(['services','blogs','settings','menus','sliders','banner_section','whychooseus','doctor_section']));
     }
     public function show(Request $request,$id)
     {
@@ -30,7 +37,7 @@ class ServiceController extends Controller
         //     dd('aha');
         // }
         //   dd( $settings);
-        ;
+        
         $menus=menu::all();
         $blogs=blog::all();
         $sliders=slider::all();
