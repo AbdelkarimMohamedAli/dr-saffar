@@ -39,10 +39,16 @@ Route::resource('Service', '\App\Http\Controllers\ServiceController');
 });
 
 
-Route::get('Blogs', 'App\Http\Controllers\front\BlogController@index');
+Route::get('Blogs', 'App\Http\Controllers\front\BlogController@index')->name('Blogs');
 Route::get('medical_news/{id}', 'App\Http\Controllers\front\BlogController@show')->name('medical_news.show');
-Route::get('Services', 'App\Http\Controllers\front\ServiceController@index');
+Route::get('Services', 'App\Http\Controllers\front\ServiceController@index')->name('Services');;
 Route::get('services_details/{id}', 'App\Http\Controllers\front\ServiceController@show')->name('services_details.show');
+Route::get('about', 'App\Http\Controllers\front\AboutController@index')->name('about');
+Route::get('contact', 'App\Http\Controllers\front\ContactController@index')->name('contact');
+Route::post('contact', 'App\Http\Controllers\front\ContactController@store')->name('contact.store');
+
+
+
 
 
 

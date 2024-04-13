@@ -21,8 +21,8 @@ class CreateBlogsTable extends Migration
             $table->string('slug')->nullable();
             $table->string('blog_subtitle_en')->nullable();
             $table->string('blog_subtitle')->nullable();
-            $table->string('blog_desc_en')->nullable();
-            $table->string('blog_desc')->nullable();
+            $table->string('blog_desc_en',1000)->nullable();
+            $table->string('blog_desc',1000)->nullable();
             $table->string('blog_keywords')->nullable();
             
             $table->dateTime('blog_date')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

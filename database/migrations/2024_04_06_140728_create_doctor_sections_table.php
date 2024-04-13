@@ -19,16 +19,16 @@ class CreateDoctorSectionsTable extends Migration
             $table->string('section_title')->nullable();
             $table->string('section_sub_en')->nullable();
             $table->string('section_sub')->nullable();
-            $table->string('section_desc_en')->nullable();
-            $table->string('section_desc')->nullable();
+            $table->string('section_desc_en',1000)->nullable();
+            $table->string('section_desc',1000)->nullable();
             $table->string('section_vector_img')->nullable();
             $table->string('section_dr_img')->nullable();
             $table->string('dr_name_en')->nullable();
             $table->string('dr_name')->nullable();
             $table->string('dr_medical_title_en')->nullable();
             $table->string('dr_medical_title')->nullable();
-            $table->string('Qualification_en')->nullable();
-            $table->string('Qualification')->nullable();
+            $table->string('Qualification_en',1000)->nullable();
+            $table->string('Qualification',1000)->nullable();
 
             $table->timestamps();
         });

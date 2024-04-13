@@ -28,8 +28,8 @@ class CreateSettingsTable extends Migration
             $table->string('open_hours')->nullable();
             $table->string('location_en')->nullable();
             $table->string('location')->nullable();
-            $table->string('subtitle_en')->nullable();
-            $table->string('subtitle')->nullable();
+            $table->string('subtitle_en',1000)->nullable();
+            $table->string('subtitle',1000)->nullable();
             $table->string('favicon')->nullable();
             $table->string('dr_image')->nullable();
             $table->string('dr_name_en')->nullable();

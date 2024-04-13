@@ -19,11 +19,12 @@
         @else         @continue   @endif
              
         @endforeach
-
             <li class="nav-item">
-                <a href="{{ route('setlocale', 'en') }} {{ session('locale') == 'en' ? 'selected' : '' }}" class="nav-link active">English</a>
-                <a href="{{ route('setlocale', 'ar') }} {{ session('locale') == 'ar' ? 'selected' : '' }}" class="nav-link active">عربي</a>
-
+            @if(session('locale') == 'ar')
+                <a href="{{ route('setlocale', 'en') }}" class="nav-link active">English</a>
+            @else
+                <a href="{{ route('setlocale', 'ar') }}" class="nav-link active">عربي</a>
+            @endif
             </li>
  
 

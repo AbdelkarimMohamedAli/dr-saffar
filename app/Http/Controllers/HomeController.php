@@ -19,9 +19,14 @@ class HomeController extends Controller
     //
     public function index()
     {
+
         //
          $settings=setting::all()->toArray();
-        //$settings = Setting::all()->pluck('value', 'key')->toArray();
+        // if(!empty($settings)){
+        //     dd('aha');
+        // }
+        //   dd( $settings);
+        ;
         $menus=menu::all();
         $blogs=blog::all();
         $sliders=slider::all();
@@ -31,6 +36,9 @@ class HomeController extends Controller
         $doctor_section=doctor_section::all()->toArray();
 
         
+        // $value = $request->session()->put('key', 'value');
+        session()->put('locale', 'en');
+
 
 
 

@@ -1,9 +1,9 @@
    <!-- Start Services Area -->
-   <div class="services-area pt-100 pb-75">
+   <div class="services-area pt-100 pb-75" <?php if(session('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
             <div class="container">
                 <div class="section-title">
-                    <span>Our-Services </span>
-                    <h2>services-subtitle</h2>
+                    <span>@if(session('locale') == 'en') Our-Services @else خداماتنا @endif</span>
+                    <h2>@if(session('locale') == 'en') Services @else خداماتنا @endif</h2>
                 </div>
 
                 <div class="row justify-content-center">
@@ -20,7 +20,7 @@
                                 <h3>
                                     <a href="{{ route('services_details.show', ['id' => $service->id]) }}">{{ $service->services_title_en }}</a>
                                 </h3>
-                                <p>{{ $service->services_subtitle_en }}</p>
+                                <p>@if(session('locale') == 'en') {{ $service->services_subtitle_en }} @else {{ $service->services_subtitle }} @endif</p>
                                 <a href="{{ route('services_details.show', ['id' => $service->id]) }}" class="services-btn">Read-More</a>
                             </div>
 

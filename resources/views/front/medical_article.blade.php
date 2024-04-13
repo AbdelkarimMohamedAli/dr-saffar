@@ -1,16 +1,16 @@
 
  
  <!-- Start Page Banner Area -->
-     <div class="page-banner-area">
+     <div class="page-banner-area"<?php if(session('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
             <div class="container">
                 <div class="page-banner-content" data-speed="0.06" data-revert="true">
-                    <h2 data-aos="fade-right" data-aos-delay="30" data-aos-duration="300">Latest-News</h2>
+                    <h2 data-aos="fade-right" data-aos-delay="30" data-aos-duration="300"><?php   if(session('locale') == 'en'){?> Latest-News  <?php }else{ ?>  اخر الأخبار  <?php } ?></h2>
 
                     <ul data-aos="fade-right" data-aos-delay="70" data-aos-duration="700">
                         <li>
                             <a href="index"><?php echo $lang['menu-home']; ?></a>
                         </li>
-                        <li>Latest-News</li>
+                        <li><?php   if(session('locale') == 'en'){?> Latest-News  <?php }else{ ?>  اخر الأخبار  <?php } ?></li>
                     </ul>
                 </div>
 
@@ -24,7 +24,7 @@
         
 
         <!-- Start Blog Details Area -->
-        <div class="blog-details-area ptb-100">
+        <div class="blog-details-area ptb-100"<?php if(session('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12">
@@ -41,15 +41,16 @@
                                 <ul class="entry-meta">
                                     <li>{{ asset('assets/imgs/'.$blog->dr_image) }}
                                         <img src="{{ asset('assets/imgs/'.$setting[0]['dr_image']) }}" alt="image">
-                                        <a href="#">{{ $setting[0]['title']}}</a>
+                                        <a href="#"><?php   if(session('locale') == 'en'){?> {{ $setting[0]['title_en'] }}  <?php }else{ ?> {{ $setting[0]['title'] }} <?php } ?></a>
                                     </li>
+                                    
                                     
                                     
                                 </ul>
 
-                                <h3>{{ $blog->blog_title_en }}</h3>
+                                <h3><?php   if(session('locale') == 'en'){?> {{ $blog->blog_title_en }}  <?php }else{ ?> {{ $blog->blog_title }} <?php } ?></h3>
 
-                                <p style="text-align:justify;">{{ $blog->blog_desc_en }}</p>
+                                <p style="text-align:justify;"><?php   if(session('locale') == 'en'){?> {{ $blog->blog_desc_en }}  <?php }else{ ?> {{ $blog->blog_desc }} <?php } ?></p>
  
                             </div>
  
@@ -74,8 +75,8 @@
                                             <span class="fullimage bg3" role="img"></span>
                                         </a>
                                         <div class="info">
-                                            <h4><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}">{{ $blog->blog_title_en }}</a></h4>
-                                            <span><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}">{{ $setting[0]['title']}}</a></span>
+                                            <h4><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}"><?php   if(session('locale') == 'en'){?> {{ $blog->blog_title_en }}  <?php }else{ ?> {{ $blog->blog_title }} <?php } ?></a></h4>
+                                            <span><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}"><?php   if(session('locale') == 'en'){?> {{ $setting[0]['title_en'] }}  <?php }else{ ?> {{ $setting[0]['title'] }} <?php } ?></a></span>
                                         </div>
                                     </article>
                                 <?php } ?>
