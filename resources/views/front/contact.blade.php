@@ -11,7 +11,7 @@
             <meta name="description" content="<?php if(!empty($settings)){ $settings[0]['seo_desc'];  }?>">
         
         <meta name="author" content="Eng. Mohamed Khaled Hekal">
-        @if(session('locale') == 'en')
+        @if(Cookie::get('locale') == 'en')
 
         <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('front/css/aos.css') }}">
@@ -48,9 +48,28 @@
         <link rel="stylesheet" href="{{ asset('assets_rtl/css/footer.css') }}">
         <link rel="stylesheet" href="{{ asset('assets_rtl/css/dark.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets_rtl/css/responsive.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/bootstrap.rtl.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/aos.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/animate.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/meanmenu.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/remixicon.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/odometer.min.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/owl.theme.default.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/jquery-ui.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/magnific-popup.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/fancybox.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/selectize.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/navbar.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets_rtl/css/dark.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets_rtl/css/responsive.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets_rtl/css/rtl.css') }}">
         @endif
         <?php if(!empty($settings)){ ?>
-         <title>@if(session('locale') == 'en') {{ $settings[0]['title_en'] }} @else {{ $settings[0]['title'] }} @endif</title>
+         <title>@if(Cookie::get('locale') == 'en') {{ $settings[0]['title_en'] }} @else {{ $settings[0]['title'] }} @endif</title>
         <?php } ?>
 <style>
     .pb-75MM {
@@ -76,7 +95,7 @@
         <!-- End Preloader Area -->
 
         <!-- Start Navbar Area --> 
-        <div class="navbar-area fixed-top" style=" <?php if(session('locale') == 'ar'){ ?> direction:rtl;<?php } ?> background: var(--white-color);
+        <div class="navbar-area fixed-top" style=" <?php if(Cookie::get('locale') == 'ar'){ ?> direction:rtl;<?php } ?> background: var(--white-color);
         -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
                 box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
         -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
@@ -163,37 +182,37 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
             <!-- Empty Area -->
 
 
-            <div class="contact-area ptb-100"<?php if(session('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
+            <div class="contact-area ptb-100"<?php if(Cookie::get('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
             <div class="container">
                 <div class="contact-form-wrap">
-                    <h3><?php if(session('locale') == 'ar'){ ?> Send Us a Message  <?php }else{ ?>  راسلنا الان  <?php } ?></h3>
+                    <h3><?php if(Cookie::get('locale') == 'en'){ ?> Send Us a Message  <?php }else{ ?>  راسلنا الان  <?php } ?></h3>
                     <form  action="{{ route('contact.store') }}" method="POST">
                     @csrf
                         <div class="form-group">
-                            <label><?php if(session('locale') == 'en'){ ?>Your Name  <?php }else{ ?>  الاسم <?php } ?></label>
-                            <input type="text" name="name" id="name" class="form-control" required="" data-error="<?php if(session('locale') == 'en'){ ?> Please enter your name  <?php }else{ ?> من فضلك قم بكتابة الاسم  <?php } ?>" placeholder="<?php if(session('locale') == 'en'){ ?> Enter your name  <?php }else{ ?>  الاســــــم  <?php } ?>">
+                            <label><?php if(Cookie::get('locale') == 'en'){ ?>Your Name  <?php }else{ ?>  الاسم <?php } ?></label>
+                            <input type="text" name="name" id="name" class="form-control" required="" data-error="<?php if(Cookie::get('locale') == 'en'){ ?> Please enter your name  <?php }else{ ?> من فضلك قم بكتابة الاسم  <?php } ?>" placeholder="<?php if(Cookie::get('locale') == 'en'){ ?> Enter your name  <?php }else{ ?>  الاســــــم  <?php } ?>">
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <label><?php if(session('locale') == 'en'){ ?> Your Email <?php }else{ ?>  البريد الالكتروني <?php } ?></label>
-                            <input type="email" name="email" id="email" class="form-control" required="" data-error="<?php if(session('locale') == 'en'){ ?> Please enter your email  <?php }else{ ?> من فضلك قم بكتابة البريد الالكتروني  <?php } ?>" placeholder="<?php if(session('locale') == 'en'){ ?>  Enter your email <?php }else{ ?> البريد الالكتروني  <?php } ?>">
+                            <label><?php if(Cookie::get('locale') == 'en'){ ?> Your Email <?php }else{ ?>  البريد الالكتروني <?php } ?></label>
+                            <input type="email" name="email" id="email" class="form-control" required="" data-error="<?php if(Cookie::get('locale') == 'en'){ ?> Please enter your email  <?php }else{ ?> من فضلك قم بكتابة البريد الالكتروني  <?php } ?>" placeholder="<?php if(Cookie::get('locale') == 'en'){ ?>  Enter your email <?php }else{ ?> البريد الالكتروني  <?php } ?>">
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <label><?php if(session('locale') == 'en'){ ?>  Phone Number <?php }else{ ?>  رقم الهاتف <?php } ?></label>
-                            <input type="number" name="phone" id="phone" class="form-control" required="" data-error="<?php if(session('locale') == 'en'){ ?> Please enter your phone number  <?php }else{ ?>  من فضلك قم بكتابة رقم الهاتف الخاص بك <?php } ?>" placeholder="<?php if(session('locale') == 'en'){ ?> Phone Number  <?php }else{ ?> رقم الهاتف  <?php } ?>">
+                            <label><?php if(Cookie::get('locale') == 'en'){ ?>  Phone Number <?php }else{ ?>  رقم الهاتف <?php } ?></label>
+                            <input type="number" name="phone" id="phone" class="form-control" required="" data-error="<?php if(Cookie::get('locale') == 'en'){ ?> Please enter your phone number  <?php }else{ ?>  من فضلك قم بكتابة رقم الهاتف الخاص بك <?php } ?>" placeholder="<?php if(Cookie::get('locale') == 'en'){ ?> Phone Number  <?php }else{ ?> رقم الهاتف  <?php } ?>">
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <label><?php if(session('locale') == 'en'){ ?>  Your Message  <?php }else{ ?>  رسالتك <?php } ?></label>
-                            <textarea name="message" class="form-control" id="message" cols="30" rows="6" required="" data-error="   <?php if(session('locale') == 'ar'){ ?> Write your message  <?php }else{ ?>  اكتب رسالتك <?php } ?>" placeholder="<?php if(session('locale') == 'en'){ ?> Type your message  <?php }else{ ?>    من فضلك اكتب رسالتك  <?php } ?>"></textarea>
+                            <label><?php if(Cookie::get('locale') == 'en'){ ?>  Your Message  <?php }else{ ?>  رسالتك <?php } ?></label>
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="6" required="" data-error="   <?php if(Cookie::get('locale') == 'ar'){ ?> Write your message  <?php }else{ ?>  اكتب رسالتك <?php } ?>" placeholder="<?php if(Cookie::get('locale') == 'en'){ ?> Type your message  <?php }else{ ?>    من فضلك اكتب رسالتك  <?php } ?>"></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
 
-                        <button type="submit" class="default-btn"><?php if(session('locale') == 'ar'){ ?>  Send Message <?php }else{ ?> ارسل الان  <?php } ?> </button>
+                        <button type="submit" class="default-btn"><?php if(Cookie::get('locale') == 'ar'){ ?>  Send Message <?php }else{ ?> ارسل الان  <?php } ?> </button>
                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                         <div class="clearfix"></div>
                     </form>
@@ -205,7 +224,7 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
 
 <!-- Start Footer Area -->
 <footer class="footer-area pt-100"> 
-    <div class="container" <?php   if(session('locale') == 'ar'){?> dir="rtl" <?php } ?>>
+    <div class="container" <?php   if(Cookie::get('locale') == 'ar'){?> dir="rtl" <?php } ?>>
         <div class="row justify-content-center">
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget">
@@ -214,12 +233,12 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
                         <img src="{{ asset('assets/imgs/'.$settings[0]['logo'] ) }}" class="white-logo" alt="image">
                     </div>
                     
-                    <p style="text-align:justify">@if(session('locale') == 'en')<?php if(!empty($settings)){ ?> {{ $settings[0]['subtitle_en'] }}<?php } ?> @else {{ $settings[0]['subtitle'] }} @endif</p>
+                    <p style="text-align:justify">@if(Cookie::get('locale') == 'en')<?php if(!empty($settings)){ ?> {{ $settings[0]['subtitle_en'] }}<?php } ?> @else {{ $settings[0]['subtitle'] }} @endif</p>
 
                   
                     <div class="widget-info">
                         <img src="{{ asset('assets/imgs/'. $settings[0]['dr_image'] ) }}" alt="image">
-                        <h4>@if(session('locale') == 'en')<?php if(!empty($settings)){ ?> {{ $settings[0]['dr_name_en'] }}<?php } ?> @else {{ $settings[0]['dr_name'] }} @endif</h4>
+                        <h4>@if(Cookie::get('locale') == 'en')<?php if(!empty($settings)){ ?> {{ $settings[0]['dr_name_en'] }}<?php } ?> @else {{ $settings[0]['dr_name'] }} @endif</h4>
                         <span><?php if(!empty($settings)){ ?> {{ $settings[0]['email'] }}<?php } ?></span>
                     </div>
                 </div>
@@ -227,20 +246,20 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget ps-5">
-                    <h3><?php   if(session('locale') == 'en'){?> Useful Link  <?php }else{ ?>  روابط مختصرة   <?php } ?></h3>
+                    <h3><?php   if(Cookie::get('locale') == 'en'){?> Useful Link  <?php }else{ ?>  روابط مختصرة   <?php } ?></h3>
 
                     <ul class="quick-links">
                         <li>
-                            <a href="{{ route('about') }}"><?php   if(session('locale') == 'en'){?> About Us  <?php }else{ ?>   من نحن  <?php } ?> </a>
+                            <a href="{{ route('about') }}"><?php   if(Cookie::get('locale') == 'en'){?> About Us  <?php }else{ ?>   من نحن  <?php } ?> </a>
                         </li>
                         <li>
-                            <a href="{{ route('Blogs') }}"><?php   if(session('locale') == 'en'){?> Latest-News  <?php }else{ ?>  اخر الأخبار  <?php } ?></a>
+                            <a href="{{ route('Blogs') }}"><?php   if(Cookie::get('locale') == 'en'){?> Latest-News  <?php }else{ ?>  اخر الأخبار  <?php } ?></a>
                         </li>
                         <li>
-                            <a href="contact"><?php   if(session('locale') == 'en'){?> Contact Us  <?php }else{ ?>   اتصل بنا  <?php } ?></a>
+                            <a href="contact"><?php   if(Cookie::get('locale') == 'en'){?> Contact Us  <?php }else{ ?>   اتصل بنا  <?php } ?></a>
                         </li>
                         <li>
-                            <a href="{{ route('Services') }}"><?php   if(session('locale') == 'en'){?> Our-Services  <?php }else{ ?>   خدماتنا  <?php } ?></a>
+                            <a href="{{ route('Services') }}"><?php   if(Cookie::get('locale') == 'en'){?> Our-Services  <?php }else{ ?>   خدماتنا  <?php } ?></a>
                         </li>
                     </ul>
                 </div>
@@ -248,7 +267,7 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget">
-                    <h3>@if(session('locale') == 'en') Latest-News @else اخر الأخبار @endif</h3>
+                    <h3>@if(Cookie::get('locale') == 'en') Latest-News @else اخر الأخبار @endif</h3>
                     
                     <div class="footer-widget-blog">
                     <?php  foreach($blogs as $blog){ ?> 
@@ -258,8 +277,8 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
                             </a>
                             <div class="info">
                             
-                                <h4><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}">@if(session('locale') == 'en') {{ $blog->blog_title_en }} @else {{ $blog->blog_title }} @endif </a></h4>
-                                <span><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}">@if(session('locale') == 'en') {{ $settings[0]['title_en']}} @else {{ $settings[0]['title']}} @endif</a></span>
+                                <h4><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}">@if(Cookie::get('locale') == 'en') {{ $blog->blog_title_en }} @else {{ $blog->blog_title }} @endif </a></h4>
+                                <span><a href="{{ route('medical_news.show', ['id' => $blog->id]) }}">@if(Cookie::get('locale') == 'en') {{ $settings[0]['title_en']}} @else {{ $settings[0]['title']}} @endif</a></span>
                                  
                             </div>
                         </article>
@@ -270,25 +289,25 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget ps-3">
-                    <h3><?php   if(session('locale') == 'en'){?> Contact Information  <?php }else{ ?>   بيانات الإتصال  <?php } ?></h3>
+                    <h3><?php   if(Cookie::get('locale') == 'en'){?> Contact Information  <?php }else{ ?>   بيانات الإتصال  <?php } ?></h3>
 
                     <ul class="footer-information">
                         <li>
                             <i class="ri-phone-fill"></i>
                             <h4><a href="tel:<?php if(!empty($settings)){ ?>{{ $settings[0]['phone1']}}<?php } ?> "><?php if(!empty($settings)){ ?> {{ $settings[0]['phone1']}} <?php } ?></a></h4>
-                            <span><?php   if(session('locale') == 'en'){?>  Call Today <?php }else{ ?>  اتصل الان   <?php } ?> </span>
+                            <span><?php   if(Cookie::get('locale') == 'en'){?>  Call Today <?php }else{ ?>  اتصل الان   <?php } ?> </span>
                         </li>
 
                         <li>
                             <i class="ri-time-line"></i>
-                            <h4>@if(session('locale') == 'en') <?php if(!empty($settings)){ ?>{{ $settings[0]['open_hours_en']}}<?php } ?>  @else {{ $settings[0]['open_hours']}} @endif</h4>
-                            <span><?php   if(session('locale') == 'en'){?>Open Hour<?php }else{ ?> ساعات العمل <?php } ?></span>
+                            <h4>@if(Cookie::get('locale') == 'en') <?php if(!empty($settings)){ ?>{{ $settings[0]['open_hours_en']}}<?php } ?>  @else {{ $settings[0]['open_hours']}} @endif</h4>
+                            <span><?php   if(Cookie::get('locale') == 'en'){?>Open Hour<?php }else{ ?> ساعات العمل <?php } ?></span>
                         </li>
 
                         <li>
                             <i class="ri-map-pin-line"></i>
-                            <h4>@if(session('locale') == 'en') <?php if(!empty($settings)){ ?> {{ $settings[0]['location_en']}}<?php } ?>  @else {{ $settings[0]['location']}} @endif</h4>
-                            <span><?php   if(session('locale') == 'en'){?> Our Location  <?php }else{ ?> العنوان <?php } ?></span>
+                            <h4>@if(Cookie::get('locale') == 'en') <?php if(!empty($settings)){ ?> {{ $settings[0]['location_en']}}<?php } ?>  @else {{ $settings[0]['location']}} @endif</h4>
+                            <span><?php   if(Cookie::get('locale') == 'en'){?> Our Location  <?php }else{ ?> العنوان <?php } ?></span>
                         </li>
                     </ul>
 
@@ -307,7 +326,7 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
         <div class="container">
             <div class="copyright-area-content">
             <p>
-            <?php   if(session('locale') == 'en'){?>
+            <?php   if(Cookie::get('locale') == 'en'){?>
                 Copyright @ <script>document.write(new Date().getFullYear())</script> All Rights Reserved.
             <?php }else{ ?>
                             جميع الحقوق محفوظة -  <script>document.write(new Date().getFullYear()) </script>
@@ -326,7 +345,7 @@ background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
 <!-- End Go Top Area -->
 
 <!-- Links of JS files -->
-@if(session('locale') == 'en')
+@if(Cookie::get('locale') == 'en')
 <script src="{{ URL::asset('front/js/jquery.min.js')}}"></script>
 <script src="{{ URL::asset('front/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{ URL::asset('front/js/jquery.meanmenu.js')}}"></script>

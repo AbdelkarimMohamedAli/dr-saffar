@@ -1,16 +1,30 @@
    <!-- Start Healthcare Doctor Area -->
-   <div class="healthcare-doctor-area ptb-100"<?php if(session('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
+   <div class="healthcare-doctor-area ptb-100"<?php if(Cookie::get('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <div class="healthcare-doctor-content" data-speed="0.05" data-revert="true">
-                        
-                            <span>@if(session('locale') == 'en')<?php if(!empty($doctor_section)){ ?> {{ $doctor_section[0]['section_title_en']}}<?php } ?> @else {{ $doctor_section[0]['section_title']}} @endif</span>
-                            <h3>@if(session('locale') == 'en')<?php if(!empty($doctor_section)){ ?> {{ $doctor_section[0]['section_sub_en']}}<?php } ?> @else {{ $doctor_section[0]['section_sub']}} @endif</h3>
-                            <p>@if(session('locale') == 'en')<?php if(!empty($doctor_section)){ ?> {{ $doctor_section[0]['section_desc_en']}}<?php } ?> @else {{ $doctor_section[0]['section_desc']}} @endif</p>
+                        <span> <?php if(Cookie::get('locale') == 'en' && !empty($doctor_section) ){ ?>
+                                    {{ $doctor_section[0]['section_title_en'] }}
+                            <?php  }elseif(Cookie::get('locale') == 'ar' && !empty($doctor_section)){ ?>
+                                {{ $doctor_section[0]['section_title']}}
+                             <?php } ?> 
+                        </span>
+                        <h3> <?php if(Cookie::get('locale') == 'en' && !empty($doctor_section) ){ ?>
+                                    {{ $doctor_section[0]['section_sub_en'] }}
+                            <?php  }elseif(Cookie::get('locale') == 'ar' && !empty($doctor_section)){ ?>
+                                {{ $doctor_section[0]['section_sub']}}
+                             <?php } ?> 
+                        </h3>
+                        <p> <?php if(Cookie::get('locale') == 'en' && !empty($doctor_section) ){ ?>
+                                    {{ $doctor_section[0]['section_desc_en'] }}
+                            <?php  }elseif(Cookie::get('locale') == 'ar' && !empty($doctor_section)){ ?>
+                                {{ $doctor_section[0]['section_desc']}}
+                             <?php } ?> 
+                        </p>
 
                             <div class="healthcare-btn">
-                                <a href="{{ route('contact') }}" class="default-btn"><?php   if(session('locale') == 'en'){?> Contact Us  <?php }else{ ?> اتصل بنا <?php } ?></a>
+                                <a href="{{ route('contact') }}" class="default-btn"><?php   if(Cookie::get('locale') == 'en'){?> Contact Us  <?php }else{ ?> اتصل بنا <?php } ?></a>
                             </div>
 
                             <div class="healthcare-stethoscope">

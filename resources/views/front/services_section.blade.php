@@ -1,9 +1,9 @@
    <!-- Start Services Area -->
-   <div class="services-area pt-100 pb-75" <?php if(session('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
+   <div class="services-area pt-100 pb-75" <?php if(Cookie::get('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
             <div class="container">
                 <div class="section-title">
-                    <span>@if(session('locale') == 'en') Our-Services @else خداماتنا @endif</span>
-                    <h2>@if(session('locale') == 'en') Services @else خداماتنا @endif</h2>
+                    <span>@if(Cookie::get('locale') == 'en') Our-Services @else خداماتنا @endif</span>
+                    <h2>@if(Cookie::get('locale') == 'en') Services @else خداماتنا @endif</h2>
                 </div>
 
                 <div class="row justify-content-center">
@@ -20,7 +20,7 @@
                                 <h3>
                                     <a href="{{ route('services_details.show', ['id' => $service->id]) }}">{{ $service->services_title_en }}</a>
                                 </h3>
-                                <p>@if(session('locale') == 'en') {{ $service->services_subtitle_en }} @else {{ $service->services_subtitle }} @endif</p>
+                                <p>@if(Cookie::get('locale') == 'en') {{ $service->services_subtitle_en }} @else {{ $service->services_subtitle }} @endif</p>
                                 <a href="{{ route('services_details.show', ['id' => $service->id]) }}" class="services-btn">Read-More</a>
                             </div>
 

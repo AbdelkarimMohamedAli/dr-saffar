@@ -10,7 +10,7 @@
                                         <h3>
                                             <span class="odometer" data-count="<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_counter_1'] }} <?php } ?>">00</span>
                                         </h3>
-                                        <p>@if(session('locale') == 'en')<?php if(!empty($whychooseus)){ ?>  {{ $whychooseus[0]['box_title_1_en'] }} <?php } ?> @else <?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_title_1'] }} <?php } ?> @endif</p>
+                                        <p>@if(Cookie::get('locale') == 'en')<?php if(!empty($whychooseus)){ ?>  {{ $whychooseus[0]['box_title_1_en'] }} <?php } ?> @else <?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_title_1'] }} <?php } ?> @endif</p>
                                     </div>
                                 </div>
 
@@ -19,7 +19,7 @@
                                         <h3>
                                             <span class="odometer" data-count="{ $whychooseus[0]['box_counter_2'] }}">00</span>
                                         </h3>
-                                        <p>@if(session('locale') == 'en') <?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_title_2_en'] }} <?php } ?> @else {{ $whychooseus[0]['box_title_2'] }} @endif</p>
+                                        <p>@if(Cookie::get('locale') == 'en') <?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_title_2_en'] }} <?php } ?> @else {{ $whychooseus[0]['box_title_2'] }} @endif</p>
                                     </div>
                                 </div>
 
@@ -28,7 +28,7 @@
                                         <h3> 
                                             <span class="odometer" data-count="<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_counter_3'] }} <?php } ?>">00</span>
                                         </h3>
-                                        <p>@if(session('locale') == 'en') <?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_title_3_en'] }} <?php } ?> @else {{ $whychooseus[0]['box_title_3'] }} @endif</p>
+                                        <p>@if(Cookie::get('locale') == 'en') <?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_title_3_en'] }} <?php } ?> @else {{ $whychooseus[0]['box_title_3'] }} @endif</p>
                                     </div>
                                 </div>
 
@@ -37,18 +37,18 @@
                                         <h3>
                                             <span class="odometer" data-count="<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_counter_4'] }} <?php } ?>">00</span>
                                         </h3>
-                                        <p>@if(session('locale') == 'en') <?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_title_4_en'] }} <?php } ?> @else {{ $whychooseus[0]['box_title_4'] }} @endif</p>
+                                        <p>@if(Cookie::get('locale') == 'en') <?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['box_title_4_en'] }} <?php } ?> @else {{ $whychooseus[0]['box_title_4'] }} @endif</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-12"<?php if(session('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
+                    <div class="col-lg-6 col-md-12"<?php if(Cookie::get('locale') == 'ar'){ ?> direction:rtl;<?php } ?>>
                         <div class="why-choose-content">
-                            <span>@if(session('locale') == 'en') <?php if(!empty($whychooseus)){ ?>{{ $whychooseus[0]['section_title_en'] }} <?php } ?>@else {{ $whychooseus[0]['section_title'] }} @endif</span>
-                            <h3>@if(session('locale') == 'en')<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['section_sub_en'] }}<?php } ?> @else {{ $whychooseus[0]['section_sub'] }} @endif</h3>
-                            <p>@if(session('locale') == 'en')<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['section_desc_en'] }}<?php } ?> @else {{ $whychooseus[0]['section_desc'] }} @endif</p>  
+                            <span>@if(Cookie::get('locale') == 'en') <?php if(!empty($whychooseus)){ ?>{{ $whychooseus[0]['section_title_en'] }} <?php } ?>@else {{ $whychooseus[0]['section_title'] }} @endif</span>
+                            <h3>@if(Cookie::get('locale') == 'en')<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['section_sub_en'] }}<?php } ?> @else {{ $whychooseus[0]['section_sub'] }} @endif</h3>
+                            <p>@if(Cookie::get('locale') == 'en')<?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['section_desc_en'] }}<?php } ?> @else {{ $whychooseus[0]['section_desc'] }} @endif</p>  
                             <div class="why-choose-btn"><?php if(!empty($whychooseus)){ ?> {{ $whychooseus[0]['section_desc_en'] }}<?php } ?>
                                 <a href="{{ route('contact')}}" class="default-btn">Contactus</a>  Or  <a  style="color:red;" href="tel:<?php if(!empty($settings)){ ?>{{ $settings[0]['phone1'] }}<?php } ?>" class="primary-btn">Call Us Now</a>
                             </div>

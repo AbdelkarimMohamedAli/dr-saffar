@@ -31,7 +31,8 @@
              
         @endforeach
             <li class="nav-item">
-            @if(session('locale') == 'ar')
+            @if (Cookie::get('locale') === 'ar')
+
                 <a href="{{ route('setlocale', 'en') }}" class="nav-link active">English</a>
             @else
                 <a href="{{ route('setlocale', 'ar') }}" class="nav-link active">عربي</a>
