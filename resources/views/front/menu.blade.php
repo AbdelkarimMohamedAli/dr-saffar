@@ -2,25 +2,32 @@
         <ul class="navbar-nav m-auto">
 
         @foreach($menus as $menu)
+        
          @if($menu->parent == 0)
             <li class='nav-item'> 
-                <a class='nav-link' href="">{{ $menu->label }}</a>
-                @if($menu->parent != 0)
+                <a class='nav-link' href="#">{{ $menu->label }}</a>
+                
                     <ul class="dropdown-menu"> 
                     @foreach($menus as $menu2)
                         @if($menu2->parent == $menu->id)
                             <li class='nav-item'>
-                            <a class='nav-link' href="">{{ $menu2->label }}</a>
-                           
+                            <a class='nav-link' href="#">{{ $menu2->label }}</a>
+                            <ul class="dropdown-menu"> 
+                                @foreach($menus as $menu3)
+                                    @if($menu3->parent == $menu2->id)
+                                        <li class='nav-item'>
+                                        <a class='nav-link' href="#">{{ $menu3->label }}</a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            </ul>
                             </li>
-    
                         @endif
                     @endforeach
                     </ul>
-                @endif
-                
             </li>
-        @else         @continue   @endif
+     
+            @endif
              
         @endforeach
             <li class="nav-item">
@@ -32,15 +39,15 @@
             </li>
  
 
-        <li class='nav-item'> 
+        <!-- <li class='nav-item'> 
                 <a class='nav-link' href=""> 
                     <i class='ri-arrow-right-s-line'></i> 
                 </a>
-                <ul class="dropdown-menu">';
+                <ul class="dropdown-menu">
                 </ul>
         </li>
         
-     
+      -->
             
             
         </ul>
