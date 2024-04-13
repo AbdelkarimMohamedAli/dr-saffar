@@ -17,7 +17,7 @@
 <div class="row">
     <div class="content-body">
         <div class="container-fluid">
-            <div class="col-12">
+            <div class="col-9">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Service</h4>
